@@ -8,7 +8,7 @@
 /nb*
 /release.properties
 /target
-
+/my-test/target
 # These are needed if running in IDE without properties set
 /ibderby
 derby.log
