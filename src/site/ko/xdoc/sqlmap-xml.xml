@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-       Copyright 2009-2019 the original author or authors.
+       Copyright 2010-2020 the original author or authors.
 
        Licensed under the Apache License, Version 2.0 (the "License");
        you may not use this file except in compliance with the License.
@@ -1703,7 +1703,7 @@ public class User {
 		예를들어 다음 예제는 캐시 구현체에서 “setCacheFile(String file)” 를 호출하여 메소드를 호출할 것이다.</p>
 
         <source><![CDATA[<cache type="com.domain.something.MyCustomCache">
-  <property name="cacheFile" value="/tmp/my-custom-cache.tmp"/>
+  <property name="cacheFile" value="/tmp/com.slk.EnvTest-custom-cache.tmp"/>
 </cache>]]></source>
 
         <p>
