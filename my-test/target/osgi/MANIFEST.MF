@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1606511707828
+Build-Jdk: 1.8.0_271 (Oracle Corporation)
+Build-Jdk-Spec: 1.8
+Build-Os: Windows 10 (10.0; amd64)
+Build-Tool: Apache Maven
+Bundle-Description: The MyBatis parent POM.
+Bundle-DocURL: https://www.mybatis.org/mybatis/my-test/
+Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: my-test
+Bundle-SymbolicName: org.mybatis.my-test
+Bundle-Vendor: MyBatis.org
+Bundle-Version: 3.5.6
+Created-By: Apache Maven Bundle Plugin
+DynamicImport-Package: *
+Implementation-Title: my-test
+Implementation-Vendor: MyBatis.org
+Implementation-Version: 3.5.6
+Import-Package: com.alibaba.druid.pool;resolution:=optional,javax.sql;re
+ solution:=optional,org.apache.ibatis.annotations;resolution:=optional,o
+ rg.apache.ibatis.io;resolution:=optional,org.apache.ibatis.session;reso
+ lution:=optional
+Private-Package: com.slk.mybatis,com.slk.mybatis.config,com.slk.mybatis.
+ domain,com.slk.mybatis.mapper
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Specification-Title: my-test
+Specification-Vendor: MyBatis.org
+Specification-Version: 3.5
+Tool: Bnd-5.1.2.202007211702

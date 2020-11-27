@@ -122,6 +122,7 @@ public class Configuration {
   /**
    * Configuration factory class.
    * Used to create Configuration for loading deserialized unread properties.
+   * 用于创建配置以加载反序列化的未读属性
    *
    * @see <a href='https://github.com/mybatis/old-google-code-issues/issues/300'>Issue 300 (google code)</a>
    */
@@ -161,6 +162,7 @@ public class Configuration {
     this.environment = environment;
   }
 
+  // 全是别名
   public Configuration() {
     typeAliasRegistry.registerAlias("JDBC", JdbcTransactionFactory.class);
     typeAliasRegistry.registerAlias("MANAGED", ManagedTransactionFactory.class);
