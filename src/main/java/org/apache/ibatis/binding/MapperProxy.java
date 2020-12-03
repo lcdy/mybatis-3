@@ -82,7 +82,7 @@ public class MapperProxy<T> implements InvocationHandler, Serializable {
       if (Object.class.equals(method.getDeclaringClass())) {
         return method.invoke(this, args);
       } else {
-        return cachedInvoker(method).invoke(proxy, method, args, sqlSession);
+         return cachedInvoker(method).invoke(proxy, method, args, sqlSession);
       }
     } catch (Throwable t) {
       throw ExceptionUtil.unwrapThrowable(t);

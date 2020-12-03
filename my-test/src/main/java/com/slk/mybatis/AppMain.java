@@ -1,6 +1,7 @@
 package com.slk.mybatis;
 
 import com.slk.mybatis.config.DruidDataSource;
+import com.slk.mybatis.interceptors.InterceptorA;
 import com.slk.mybatis.mapper.RoleMapper;
 import com.slk.mybatis.mapper.UserMapper;
 import org.apache.ibatis.io.Resources;
@@ -24,7 +25,10 @@ public class AppMain {
   public static void main(String[] args) {
     try {
       SqlSession sqlSession = getSqlSessionByConfig();
-      System.out.println(sqlSession.getMapper(RoleMapper.class).selectById().getRolename());
+
+      // 准备资源
+      RoleMapper mapper = sqlSession.getMapper(RoleMapper.class);
+      System.out.println(mapper.selectById().getRolename());
       System.out.println(sqlSession.getMapper(UserMapper.class).selectById().getUsername());
     } catch (Exception e) {
       e.printStackTrace();
@@ -34,9 +38,9 @@ public class AppMain {
   }
 
   /*
-  * 分析流程：先分析session，在分析事物
-  *
-  * */
+   * 分析流程：先分析session，在分析事物
+   *
+   * */
 
   public static SqlSession getSqlSessionByConfig() throws Exception {
 
@@ -48,27 +52,27 @@ public class AppMain {
     // todo 分析事物
     TransactionFactory transactionFactory = new JdbcTransactionFactory();
 
-    // id环境隔离
+    // id环境隔离: 不同的环境给不同的数据库连接池
     // 这里：简单的给三个属性赋值
     Environment environment = new Environment("development", transactionFactory, dataSource);
 
     // todo 重要
     Configuration configuration = new Configuration(environment);
     configuration.addMappers("com.slk.mybatis.mapper");
-
+    configuration.addInterceptor(new InterceptorA());
 
     // 关键看build方法
     SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
 
     // build方法
-    // new DefaultSqlSessionFactory(config){this.configuration = configuration;};
+    // 单纯的new了一个，给属性赋值
     sqlSessionFactory = sqlSessionFactoryBuilder.build(configuration);
 
 
     /*
-    *
-    *
-    * */
+     *
+     * 这里会应用拦截器
+     * */
     sqlSession = sqlSessionFactory.openSession();
     System.out.println(sqlSession.toString());
     return sqlSession;
@@ -85,8 +89,6 @@ public class AppMain {
   public static void close(SqlSession sqlSession) {
     if (sqlSession != null) sqlSession.close();
   }
-
-
 
 
 }

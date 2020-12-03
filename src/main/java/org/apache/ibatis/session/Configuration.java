@@ -656,11 +656,13 @@ public class Configuration {
     } else if (ExecutorType.REUSE == executorType) {
       executor = new ReuseExecutor(this, transaction);
     } else {
+      // 默认simple
       executor = new SimpleExecutor(this, transaction);
     }
     if (cacheEnabled) {
       executor = new CachingExecutor(executor);
     }
+    // 拦截器
     executor = (Executor) interceptorChain.pluginAll(executor);
     return executor;
   }

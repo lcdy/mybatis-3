@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7348c8d5-16a2-49b7-9de3-e66dbf7b0d0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/AppMain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/config/DruidDataSource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/config/SqlSessionConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/domain/Role.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/domain/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/mapper/RoleMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/mapper/UserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-test/target/classes/druid.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-test/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-test/target/classes/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-test/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-test/target/my-test-3.5.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-test/target/original-my-test-3.5.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-test/target/osgi/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/AppMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/AppMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/config/SqlSessionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/config/SqlSessionConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/mapper/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/mapper/RoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/AppMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/AppMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/mapper/RoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/mapper/RoleMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/annotation/MapperAnnotationBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/annotation/MapperAnnotationBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.java" afterDir="false" />
     </list>
@@ -31,23 +25,34 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1ktFBUjiOwEOoaApBwBMXXSRSOe" />
+  <component name="ProjectId" id="mybatis-356" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DataSource.uml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -60,10 +65,21 @@
       <module name="my-test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.slk.mybatis.*" />
+          <option name="PATTERN" value="com.slk.mybatis.interceptors.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -74,6 +90,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -85,6 +102,11 @@
       <option name="presentableId" value="Default" />
       <updated>1606511845424</updated>
       <workItem from="1606511850462" duration="7480000" />
+      <workItem from="1606519482047" duration="171000" />
+      <workItem from="1606524759485" duration="7839000" />
+      <workItem from="1606586840125" duration="4224000" />
+      <workItem from="1606988958266" duration="90000" />
+      <workItem from="1606989073443" duration="793000" />
     </task>
     <task id="LOCAL-00001" summary="env">
       <created>1606513821784</created>
@@ -100,108 +122,93 @@
       <option name="project" value="LOCAL" />
       <updated>1606514173329</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="env">
+      <created>1606519519690</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606519519690</updated>
+    </task>
+    <task id="LOCAL-00004" summary="env">
+      <created>1606519622393</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606519622393</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="env" />
     <option name="LAST_COMMIT_MESSAGE" value="env" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="96" y="35" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606514999502">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="96" y="35" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1606514999502" />
-    <state x="396" y="82" width="647" height="594" key="#xdebugger.evaluate" timestamp="1606517597655">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="396" y="82" width="647" height="594" key="#xdebugger.evaluate/0.0.1280.760@0.0.1280.760" timestamp="1606517597655" />
-    <state x="195" y="0" key="CommitChangelistDialog2" timestamp="1606514172661">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="195" y="0" key="CommitChangelistDialog2/0.0.1280.760@0.0.1280.760" timestamp="1606514172661" />
-    <state width="432" height="466" key="DebuggerActiveHint" timestamp="1606517643780">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="432" height="466" key="DebuggerActiveHint/0.0.1280.760@0.0.1280.760" timestamp="1606517643780" />
-    <state x="632" y="145" key="FileChooserDialogImpl" timestamp="1606519020203">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="421" y="106" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1606515632487" />
-    <state x="632" y="145" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606519020203" />
-    <state width="1877" height="2" key="GridCell.Tab.0.bottom" timestamp="1606519421370">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1238" height="161" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1606517943922" />
-    <state width="1877" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606519421370" />
-    <state width="1877" height="2" key="GridCell.Tab.0.center" timestamp="1606519421370">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1238" height="161" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1606517943922" />
-    <state width="1877" height="2" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606519421370" />
-    <state width="1877" height="2" key="GridCell.Tab.0.left" timestamp="1606519421370">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1238" height="161" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1606517943922" />
-    <state width="1877" height="2" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606519421370" />
-    <state width="1877" height="2" key="GridCell.Tab.0.right" timestamp="1606519421370">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1238" height="161" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1606517943922" />
-    <state width="1877" height="2" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606519421370" />
-    <state width="1877" height="2" key="GridCell.Tab.1.bottom" timestamp="1606519421371">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1238" height="161" key="GridCell.Tab.1.bottom/0.0.1280.760@0.0.1280.760" timestamp="1606517944621" />
-    <state width="1877" height="2" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606519421371" />
-    <state width="1877" height="2" key="GridCell.Tab.1.center" timestamp="1606519421370">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1238" height="161" key="GridCell.Tab.1.center/0.0.1280.760@0.0.1280.760" timestamp="1606517944620" />
-    <state width="1877" height="2" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606519421370" />
-    <state width="1877" height="2" key="GridCell.Tab.1.left" timestamp="1606519421370">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1238" height="161" key="GridCell.Tab.1.left/0.0.1280.760@0.0.1280.760" timestamp="1606517944620" />
-    <state width="1877" height="2" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606519421370" />
-    <state width="1877" height="2" key="GridCell.Tab.1.right" timestamp="1606519421371">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1238" height="161" key="GridCell.Tab.1.right/0.0.1280.760@0.0.1280.760" timestamp="1606517944620" />
-    <state width="1877" height="2" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606519421371" />
-    <state x="219" y="198" key="Registry" timestamp="1606516571250">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="219" y="198" key="Registry/0.0.1280.760@0.0.1280.760" timestamp="1606516571250" />
-    <state x="142" y="25" key="SettingsEditor" timestamp="1606515753616">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="142" y="25" key="SettingsEditor/0.0.1280.760@0.0.1280.760" timestamp="1606515753616" />
-    <state x="233" y="113" key="Vcs.Push.Dialog.v2" timestamp="1606514192966">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="233" y="113" key="Vcs.Push.Dialog.v2/0.0.1280.760@0.0.1280.760" timestamp="1606514192966" />
-    <state x="306" y="85" width="672" height="678" key="search.everywhere.popup" timestamp="1606517897047">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="306" y="85" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1606517897047" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java</url>
+          <line>665</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java</url>
+          <line>813</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxyFactory.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxy.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/interceptors/InterceptorA.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/AppMain.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="12" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxy.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxy.java</url>
+          <line>165</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperMethod.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperMethod.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperMethod.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperMethod.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
-        <PinnedItemInfo typeName="org.apache.ibatis.binding.MapperRegistry" fieldName="knownMappers" />
+        <PinnedItemInfo />
       </pinned-members>
     </pin-to-top-manager>
   </component>
