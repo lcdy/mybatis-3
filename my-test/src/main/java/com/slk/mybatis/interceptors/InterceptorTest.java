@@ -10,7 +10,11 @@ import org.apache.ibatis.scripting.defaults.DefaultParameterHandler;
 
 import java.util.Properties;
 
-public class InterceptorA implements Interceptor {
+
+/**
+ * 测试使用拦截器
+ */
+public class InterceptorTest implements Interceptor {
 
 
   @Override

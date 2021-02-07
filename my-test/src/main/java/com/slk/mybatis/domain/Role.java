@@ -1,7 +1,14 @@
 package com.slk.mybatis.domain;
 
 
-public class Role {
+import lombok.Data;
+import lombok.ToString;
+
+import java.io.Serializable;
+
+@Data
+@ToString
+public class Role implements Serializable {
 
   private Long id;
   private String rolename;

@@ -1,7 +1,7 @@
 package com.slk.mybatis;
 
 import com.slk.mybatis.config.DruidDataSource;
-import com.slk.mybatis.interceptors.InterceptorA;
+import com.slk.mybatis.interceptors.ShowSql;
 import com.slk.mybatis.mapper.RoleMapper;
 import com.slk.mybatis.mapper.UserMapper;
 import org.apache.ibatis.io.Resources;
@@ -59,16 +59,12 @@ public class AppMain {
     // todo 重要
     Configuration configuration = new Configuration(environment);
     configuration.addMappers("com.slk.mybatis.mapper");
-    configuration.addInterceptor(new InterceptorA());
-
+    configuration.addInterceptor(new ShowSql());
     // 关键看build方法
     SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
-
     // build方法
     // 单纯的new了一个，给属性赋值
     sqlSessionFactory = sqlSessionFactoryBuilder.build(configuration);
-
-
     /*
      *
      * 这里会应用拦截器
