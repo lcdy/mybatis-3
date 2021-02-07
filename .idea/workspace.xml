@@ -5,92 +5,102 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7348c8d5-16a2-49b7-9de3-e66dbf7b0d0b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/ACache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/domain/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/environmentConfig/SqlSessionConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/mapper/UsersMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source-mybatis/src/main/resources/mappers/UsersMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source-mybatis/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source-mybatis/src/main/resources/一级缓存.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_3_3_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_3_3_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_200.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_200.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_kohlschutter_junixsocket_junixsocket_common_2_0_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_kohlschutter_junixsocket_junixsocket_common_2_0_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_kohlschutter_junixsocket_junixsocket_native_common_2_0_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_kohlschutter_junixsocket_junixsocket_native_common_2_0_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__eu_codearte_catch_exception_catch_exception_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__eu_codearte_catch_exception_catch_exception_2_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_21.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_21.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_22.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_22.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_15.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_15.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_15.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_15.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_5_5_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_5_5_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_platform_5_5_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_platform_5_5_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ognl_ognl_3_2_15.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ognl_ognl_3_2_15.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_20.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_20.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_derby_derby_10_14_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_derby_derby_10_14_2_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_13_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_13_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_velocity_velocity_engine_core_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_velocity_velocity_engine_core_2_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_17_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_17_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hsqldb_hsqldb_2_5_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hsqldb_hsqldb_2_5_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_27_0_GA.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_27_0_GA.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jboss_vfs_3_2_15_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jboss_vfs_3_2_15_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_4_GA.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_4_GA.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_19_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_19_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_5_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_5_13.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_5_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_5_13.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_7_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_7_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_2_16.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_2_16.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_16.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_16.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_rnorth_duct_tape_duct_tape_1_0_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_rnorth_duct_tape_duct_tape_1_0_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_rnorth_tcp_unix_socket_proxy_1_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_rnorth_tcp_unix_socket_proxy_1_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_rnorth_visible_assertions_visible_assertions_2_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_rnorth_visible_assertions_visible_assertions_2_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scijava_native_lib_loader_2_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scijava_native_lib_loader_2_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_30.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_30.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testcontainers_database_commons_1_14_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testcontainers_database_commons_1_14_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testcontainers_jdbc_1_14_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testcontainers_jdbc_1_14_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testcontainers_junit_jupiter_1_14_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testcontainers_junit_jupiter_1_14_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testcontainers_mysql_1_14_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testcontainers_mysql_1_14_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testcontainers_postgresql_1_14_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testcontainers_postgresql_1_14_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testcontainers_testcontainers_1_14_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testcontainers_testcontainers_1_14_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/AppMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/AppMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/domain/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/domain/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/interceptors/InterceptorA.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/interceptors/InterceptorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/AppMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/AppMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/domain/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/domain/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/domain/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ICLA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ISSUE_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTICE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/source-mybatis/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/my-test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/source-mybatis/source-mybatis.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/source-mybatis/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/AppMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/ZAppMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/config/DruidDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/environmentConfig/DruidDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/config/SqlSessionConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/domain/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/domain/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/interceptors/InterceptorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/interceptors/InterceptorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/interceptors/ShowSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/interceptors/ShowSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/mapper/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/mapper/RoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/src/main/resources/DruidDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/source-mybatis/src/main/resources/DruidDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/src/main/resources/druid.properties" beforeDir="false" afterPath="$PROJECT_DIR$/source-mybatis/src/main/resources/druid.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/source-mybatis/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/src/main/resources/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/AppMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/config/DruidDataSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/config/SqlSessionConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/domain/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/domain/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/mapper/RoleMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/target/classes/com/slk/mybatis/mapper/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/target/classes/druid.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/target/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/target/classes/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/target/my-test-3.5.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/target/original-my-test-3.5.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-test/target/osgi/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/MapperBuilderAssistant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/MapperBuilderAssistant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLConfigBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLConfigBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLMapperBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLMapperBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLStatementBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLStatementBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/cache/decorators/TransactionalCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/cache/decorators/TransactionalCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/CachingExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/CachingExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionFactoryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionFactoryBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travis/after_success.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/travis/settings.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="mybatis-356" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="threads" value="1C" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="source-mybatis-356" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -105,19 +115,37 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/source-mybatis/src/main/resources" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\mybatis\mybatis-3\source-mybatis\src\main\resources" />
+      <recent name="F:\mybatis\mybatis-3\source-mybatis\src\main\java\source\mybatis\domain" />
       <recent name="F:\mybatis\mybatis-3\my-test" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ACache">
+    <configuration name="ACache" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="source.mybatis.ACache" />
+      <module name="source-mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="source.mybatis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AppMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.slk.mybatis.AppMain" />
-      <module name="my-test" />
+      <module name="source-mybatis" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.slk.mybatis.interceptors.*" />
@@ -128,13 +156,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ACache.cache" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="source-mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="source.mybatis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="source.mybatis" />
+      <option name="MAIN_CLASS_NAME" value="source.mybatis.ACache" />
+      <option name="METHOD_NAME" value="cache" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ACache" />
+        <item itemvalue="JUnit.ACache.cache" />
         <item itemvalue="Application.AppMain" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -154,6 +203,14 @@
       <workItem from="1607058859958" duration="5740000" />
       <workItem from="1611912859886" duration="419000" />
       <workItem from="1611977754921" duration="599000" />
+      <workItem from="1612687184357" duration="552000" />
+      <workItem from="1612687778178" duration="60000" />
+      <workItem from="1612687859092" duration="97000" />
+      <workItem from="1612688035366" duration="1632000" />
+      <workItem from="1612689686440" duration="2574000" />
+      <workItem from="1612701472464" duration="38000" />
+      <workItem from="1612701526873" duration="11017000" />
+      <workItem from="1612715216089" duration="2403000" />
     </task>
     <task id="LOCAL-00001" summary="env">
       <created>1606513821784</created>
@@ -194,23 +251,112 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="env" />
     <option name="LAST_COMMIT_MESSAGE" value="env" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="233" y="0" key="#Plugins" timestamp="1612701537187">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="0" key="#Plugins/0.0.1280.680@0.0.1280.680" timestamp="1612701537187" />
+    <state x="358" y="215" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1612687836346">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="358" y="215" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1536.824@0.0.1536.824" timestamp="1612687836346" />
+    <state x="643" y="60" width="488" height="600" key="#xdebugger.evaluate" timestamp="1612707919273">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="643" y="60" width="488" height="600" key="#xdebugger.evaluate/0.0.1280.680@0.0.1280.680" timestamp="1612707919273" />
+    <state width="651" height="490" key="DebuggerActiveHint" timestamp="1612704315067">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="651" height="490" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1612704315067" />
+    <state width="781" height="593" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1612690327916" />
+    <state x="504" y="0" key="Diagram.Print.Preview.Dialog" timestamp="1612691900754">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="504" y="0" key="Diagram.Print.Preview.Dialog/0.0.1536.824@0.0.1536.824" timestamp="1612691900754" />
+    <state x="543" y="153" key="FileChooserDialogImpl" timestamp="1612691933769">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="543" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1612691933769" />
+    <state width="1237" height="151" key="GridCell.Tab.0.bottom" timestamp="1612714583537">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1237" height="39" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1612711397759" />
+    <state width="1237" height="151" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1612714583537" />
+    <state width="1493" height="31" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612692262299" />
+    <state width="1237" height="151" key="GridCell.Tab.0.center" timestamp="1612714583537">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1237" height="39" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1612711397759" />
+    <state width="1237" height="151" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1612714583537" />
+    <state width="1493" height="31" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612692262299" />
+    <state width="1237" height="151" key="GridCell.Tab.0.left" timestamp="1612714583537">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1237" height="39" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1612711397759" />
+    <state width="1237" height="151" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1612714583537" />
+    <state width="1493" height="31" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612692262299" />
+    <state width="1237" height="151" key="GridCell.Tab.0.right" timestamp="1612714583537">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1237" height="39" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1612711397759" />
+    <state width="1237" height="151" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1612714583537" />
+    <state width="1493" height="31" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612692262299" />
+    <state width="1237" height="39" key="GridCell.Tab.1.bottom" timestamp="1612714583533">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1237" height="39" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1612711397760" />
+    <state width="1237" height="39" key="GridCell.Tab.1.bottom/0.0.1280.760@0.0.1280.760" timestamp="1612714583533" />
+    <state width="1493" height="31" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612692262299" />
+    <state width="1237" height="39" key="GridCell.Tab.1.center" timestamp="1612714583533">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1237" height="39" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1612711397760" />
+    <state width="1237" height="39" key="GridCell.Tab.1.center/0.0.1280.760@0.0.1280.760" timestamp="1612714583533" />
+    <state width="1493" height="31" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1612692262299" />
+    <state width="1237" height="39" key="GridCell.Tab.1.left" timestamp="1612714583533">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1237" height="39" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1612711397760" />
+    <state width="1237" height="39" key="GridCell.Tab.1.left/0.0.1280.760@0.0.1280.760" timestamp="1612714583533" />
+    <state width="1493" height="31" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1612692262299" />
+    <state width="1237" height="39" key="GridCell.Tab.1.right" timestamp="1612714583533">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1237" height="39" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1612711397760" />
+    <state width="1237" height="39" key="GridCell.Tab.1.right/0.0.1280.760@0.0.1280.760" timestamp="1612714583533" />
+    <state width="1493" height="31" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1612692262299" />
+    <state x="191" y="0" key="SettingsEditor" timestamp="1612702611095">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="191" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1612702611095" />
+    <state x="229" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1612689321235" />
+    <state x="188" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1612704131974">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="188" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680@0.0.1280.680" timestamp="1612704131974" />
+    <state x="359" y="120" width="560" height="560" key="search.everywhere.popup" timestamp="1612711789468">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="359" y="120" width="560" height="560" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1612711789468" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1612691547790" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java</url>
-          <line>665</line>
+          <line>666</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java</url>
-          <line>813</line>
+          <line>814</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -224,7 +370,7 @@
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/my-test/src/main/java/com/slk/mybatis/interceptors/InterceptorTest.java</url>
+          <url>file://$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/interceptors/InterceptorTest.java</url>
           <line>26</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
@@ -257,6 +403,41 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperMethod.java</url>
           <line>65</line>
           <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSession.java</url>
+          <line>139</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/CachingExecutor.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/BaseExecutor.java</url>
+          <line>322</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/BaseExecutor.java</url>
+          <line>328</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/CachingExecutor.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/ACache.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/CachingExecutor.java</url>
+          <line>106</line>
+          <option name="timeStamp" value="58" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

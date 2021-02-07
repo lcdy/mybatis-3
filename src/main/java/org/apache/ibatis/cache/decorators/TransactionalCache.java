@@ -39,6 +39,9 @@ public class TransactionalCache implements Cache {
 
   private static final Log log = LogFactory.getLog(TransactionalCache.class);
 
+  // synchronizedCache生命周期：应用级别
+  // TransactionCache生命周期：会话级别。
+  // 直接引用，减少包装是创建TransactionCache的资源开销
   private final Cache delegate;
   private boolean clearOnCommit;
   private final Map<Object, Object> entriesToAddOnCommit;

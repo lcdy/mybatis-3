@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="logImpl" value="slf4j"/>
+    </settings>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/SFNotes?useSSL=false&amp;serverTimezone=UTC"/>
+                <property name="username" value="root"/>
+                <property name="password" value="roottt"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+
+        <!--三选一-->
+        <!--url: http协议什么的.xml-->
+        <!--class: 同级目录下名字一样的xml-->
+        <!--resource: 基于classpath加载xml-->
+        <mapper resource="mappers/UsersMapper.xml"/>
+
+        <!--package和mapper可以同时存在，但是namespace不能重复-->
+        <!--package: 扫描包下所有的mapper然后进行加载-->
+        <package name="source.mybatis.mapper"/>
+    </mappers>
+</configuration>
