@@ -626,7 +626,10 @@ public class Configuration {
     }
 
     public ParameterHandler newParameterHandler(MappedStatement mappedStatement, Object parameterObject, BoundSql boundSql) {
+        // Lang: XML解析sql，可以使用freemarker
         ParameterHandler parameterHandler = mappedStatement.getLang().createParameterHandler(mappedStatement, parameterObject, boundSql);
+
+        // parameterHandler包装多层
         parameterHandler = (ParameterHandler) interceptorChain.pluginAll(parameterHandler);
         return parameterHandler;
     }
@@ -639,7 +642,11 @@ public class Configuration {
     }
 
     public StatementHandler newStatementHandler(Executor executor, MappedStatement mappedStatement, Object parameterObject, RowBounds rowBounds, ResultHandler resultHandler, BoundSql boundSql) {
+
+        // switch case 三选一，默认是PreparedStatementHandler
         StatementHandler statementHandler = new RoutingStatementHandler(executor, mappedStatement, parameterObject, rowBounds, resultHandler, boundSql);
+
+        //
         statementHandler = (StatementHandler) interceptorChain.pluginAll(statementHandler);
         return statementHandler;
     }
@@ -660,6 +667,8 @@ public class Configuration {
             // 默认simple
             executor = new SimpleExecutor(this, transaction);
         }
+        // 如果开启了缓存，对executor包装
+        // 如果CachingExecutor没有命中缓存，还会使用默认的executor发送sql
         if (cacheEnabled) {
             executor = new CachingExecutor(executor);
         }

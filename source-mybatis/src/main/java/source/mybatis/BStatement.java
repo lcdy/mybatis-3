@@ -4,19 +4,17 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 import source.mybatis.domain.Users;
-import source.mybatis.mapper.UsersMapper;
 
 import java.io.IOException;
 import java.io.InputStream;
 
 /**
  * @author lla, 2021/2/7  16:45
+ * 每执行一次sql都会创建一个statementHandler对象
+ * statementHandler: 参数，返回结果
  */
-public class ACache {
+public class BStatement {
     static InputStream resourceAsStream;
     static SqlSessionFactoryBuilder factoryBuilder;
     static SqlSessionFactory sqlSessionFactory;
@@ -25,13 +23,7 @@ public class ACache {
     public static void main(String[] args) throws IOException {
         try {
             before();
-            // 生命周期：一次会话
             sqlSession = sqlSessionFactory.openSession();
-            // UsersMapper usersMapper = sqlSession.getMapper(UsersMapper.class);
-            // Users users1 = usersMapper.selectById(1);
-            // System.out.println(users1);
-            // 会调用DefaultSqlSession.selectList()这个方法
-            // 执行sql
             Users users = sqlSession.selectOne("source.mybatis.domain.Users.selectOne");
             System.out.println(users);
         } catch (IOException e) {
@@ -40,6 +32,7 @@ public class ACache {
             after();
         }
     }
+
 
     public static void before() throws IOException {
         resourceAsStream = Resources.getResourceAsStream("mybatisConfig.xml");

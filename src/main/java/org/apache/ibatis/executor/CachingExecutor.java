@@ -77,39 +77,43 @@ public class CachingExecutor implements Executor {
   }
 
   @Override
-  public <E> Cursor<E> queryCursor(MappedStatement ms, Object parameter, RowBounds rowBounds) throws SQLException {
-    flushCacheIfRequired(ms);
-    return delegate.queryCursor(ms, parameter, rowBounds);
+  public <E> Cursor<E> queryCursor(MappedStatement mappedStatement, Object parameter, RowBounds rowBounds) throws SQLException {
+    flushCacheIfRequired(mappedStatement);
+    return delegate.queryCursor(mappedStatement, parameter, rowBounds);
   }
 
   @Override
-  public <E> List<E> query(MappedStatement ms, Object parameterObject, RowBounds rowBounds, ResultHandler resultHandler) throws SQLException {
-    BoundSql boundSql = ms.getBoundSql(parameterObject);
-    CacheKey key = createCacheKey(ms, parameterObject, rowBounds, boundSql);
-    return query(ms, parameterObject, rowBounds, resultHandler, key, boundSql);
+  public <E> List<E> query(MappedStatement mappedStatement, Object parameterObject, RowBounds rowBounds, ResultHandler resultHandler) throws SQLException {
+    BoundSql boundSql = mappedStatement.getBoundSql(parameterObject);
+    CacheKey key = createCacheKey(mappedStatement, parameterObject, rowBounds, boundSql);
+    return query(mappedStatement, parameterObject, rowBounds, resultHandler, key, boundSql);
   }
 
   @Override
-  public <E> List<E> query(MappedStatement ms, Object parameterObject, RowBounds rowBounds, ResultHandler resultHandler, CacheKey key, BoundSql boundSql)
+  public <E> List<E> query(MappedStatement mappedStatement, Object parameterObject, RowBounds rowBounds, ResultHandler resultHandler, CacheKey key, BoundSql boundSql)
       throws SQLException {
-    // 需要开启二级缓存
-    Cache cache = ms.getCache();
+    // 是否开启了二级缓存XML使用cache标签，dao接口添加@NameSpaceCache注解
+    Cache cache = mappedStatement.getCache();
     if (cache != null) {
-      flushCacheIfRequired(ms);
-      if (ms.isUseCache() && resultHandler == null) {
-        ensureNoOutParams(ms, boundSql);
+      flushCacheIfRequired(mappedStatement);
+      if (mappedStatement.isUseCache() && resultHandler == null) {
+        ensureNoOutParams(mappedStatement, boundSql);
 
-        // 事务缓存管理器
+        // 查询二级缓存事务缓存管理器
         @SuppressWarnings("unchecked")
         List<E> list = (List<E>) tcm.getObject(cache, key);
         if (list == null) {
-          list = delegate.query(ms, parameterObject, rowBounds, resultHandler, key, boundSql);
+          // parameterObject == null, resultHandler == null
+          // mappedStatement: 全局唯一 = 命名空间+标签id|接口方法名字。
+          // boundSql包含sql
+          list = delegate.query(mappedStatement, parameterObject, rowBounds, resultHandler, key, boundSql);
           tcm.putObject(cache, key, list); // issue #578 and #116
         }
         return list;
       }
     }
-    return delegate.query(ms, parameterObject, rowBounds, resultHandler, key, boundSql);
+    // 没有开启二级缓存，直接交给baseExecutor处理
+    return delegate.query(mappedStatement, parameterObject, rowBounds, resultHandler, key, boundSql);
   }
 
   @Override

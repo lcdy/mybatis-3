@@ -23,10 +23,10 @@
         <!--url: http协议什么的.xml-->
         <!--class: 同级目录下名字一样的xml-->
         <!--resource: 基于classpath加载xml-->
-        <mapper resource="mappers/UsersMapper.xml"/>
+        <mapper resource="mappers/UsersMappers.xml"/>
 
         <!--package和mapper可以同时存在，但是namespace不能重复-->
         <!--package: 扫描包下所有的mapper然后进行加载-->
-        <package name="source.mybatis.mapper"/>
+<!--        <package name="source.mybatis.mapper"/>-->
     </mappers>
 </configuration>
