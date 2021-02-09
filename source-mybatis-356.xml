@@ -1,0 +1,1340 @@
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSession.java" description="一级缓存: 01-获取sql的包装" line="146" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSession.java" description="一级缓存: 02-cachingExcutor" line="148" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/CachingExecutor.java" description="一级缓存: 03-query" line="88" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/CachingExecutor.java" description="一级缓存: 04-查询二级缓存（需要开启二级缓存）" line="95" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/CachingExecutor.java" description="一级缓存: 05-SimpleExcutor（被cacheE代理）" line="115" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/BaseExecutor.java" description="一级缓存: 06-localCache查询一级缓存" line="153" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/BaseExecutor.java" description="一级缓存: 07-从数据库查询" line="158" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/BaseExecutor.java" description="一级缓存: 08-查询并放入一级缓存" line="328" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/BaseExecutor.java" description="一级缓存: 09-清空一级缓存" line="115" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/CachingExecutor.java" description="事务相关: 10-事务缓存管理器: 会话级别" line="103" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/cache/TransactionalCacheManager.java" description="事务相关: 11-获取事务缓存: 会话级别" line="54" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/cache/decorators/TransactionalCache.java" description="事务相关: 12-事务缓存: 会话级别" line="49" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/cache/decorators/TransactionalCache.java" description="事务相关: 13-delegateCache: 应用级别" line="44" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionFactoryBuilder.java" description="Configuration: 30-使用xml构建configuration" line="79" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLConfigBuilder.java" description="Configuration: 31-解析标签给configuration属性赋值" line="106" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLConfigBuilder.java" description="Configuration: 32-解析mappers标签" line="120" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLConfigBuilder.java" description="Configuration: 33-基于dao接口" line="366" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLConfigBuilder.java" description="Configuration: 34-基于mapper.xml文件（resource,url,class只能选其中一种）" line="370" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLConfigBuilder.java" description="Configuration: 35-解析mapper（XMLMapperBuilder）" line="375" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLMapperBuilder.java" description="Configuration: 36-开始解析" line="94" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLMapperBuilder.java" description="Configuration: 37-解析sql语句块" line="122" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLMapperBuilder.java" description="Configuration: 38-解析parseStatementNode" line="140" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLStatementBuilder.java" description="Configuration: 39-开始解析xml中的sql" line="63" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/MapperBuilderAssistant.java" description="Configuration: 40-mappedStatement(对应一个sql标签)" line="273" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" description="Configuration: 41-添加statement到config" line="763" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.java" description="DefaultSqlSession: 51-构建session" line="95" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" description="DefaultSqlSession: 52-newExecutor" line="659" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" description="DefaultSqlSession: 53-包装插件s" line="676" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSession.java" description="执行sql: 70-入口cachingExecutor.query()" line="144" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/CachingExecutor.java" description="执行sql: 71-SimpleExecutor查询" line="108" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/BaseExecutor.java" description="执行sql: 72-BaseEx查询数据库入口" line="156" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/BaseExecutor.java" description="执行sql: 73-BaseEx DoQuery()" line="326" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/SimpleExecutor.java" description="执行sql: 74-newStatementHandler" line="60" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/RoutingStatementHandler.java" description="执行sql: 75-三选一" line="45" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/BaseStatementHandler.java" description="执行sql: 76-构建handler" line="69" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" description="执行sql: 77-parameterHandler" line="629" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" description="包装插件: 90-executor" line="675" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" description="包装插件: 91-statementHandler" line="650" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" description="包装插件: 92-parameterHandler" line="632" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" description="包装插件: 93-resultHandler" line="639" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/scripting/defaults/DefaultParameterHandler.java" description="流程分析: 1、设置sql参数" line="62" />
+  </component>
+  <component name="DatabaseView">
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SFNotes" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SFNotes" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SFNotes" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sfnotes: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SFNotes" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sfnotes: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="roles: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="mybatis" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/B一条SQL的执行流程.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/C插件.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="499">
+              <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#687#711#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/StatementHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/ResultHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="22" column="62" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="676" column="23" selection-start-line="676" selection-start-column="23" selection-end-line="676" selection-end-column="23" />
+              <folding>
+                <element signature="e#16358#16359#0" expanded="true" />
+                <element signature="e#16397#16398#0" expanded="true" />
+                <element signature="e#28664#28665#0" expanded="true" />
+                <element signature="e#28724#28725#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/Executor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="36" selection-start-line="36" selection-end-line="64" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/interceptors/PagePlugin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#439#463#0" expanded="true" />
+                <element signature="e#1822#1823#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/parameter/ParameterHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="27" selection-start-line="27" selection-end-line="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/scripting/defaults/DefaultParameterHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="61" column="21" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
+              <folding>
+                <element signature="e#2157#2158#0" expanded="true" />
+                <element signature="e#2189#2190#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/SimpleExecutor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="920">
+              <caret line="68" column="11" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
+              <folding>
+                <element signature="e#1413#1414#0" expanded="true" />
+                <element signature="e#1456#1457#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Cache</find>
+      <find>localCache</find>
+      <find>cache.</find>
+      <find>localCache.putObject</find>
+      <find>update</find>
+      <find>cache</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/cache/decorators/TransactionalCache.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionFactoryBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLConfigBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLMapperBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLStatementBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/MapperBuilderAssistant.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/resources/mybatis-config.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSession.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/CachingExecutor.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/resources/mappers/UsersMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/BaseExecutor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/SimpleExecutor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/BaseStatementHandler.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/BSql.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/BCallSql.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/BSqlProcessor.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/domain/Roles.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/mapper/RolesMapper.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/ZAppMain.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/ACache.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/SessionProvider.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/resources/mappers/UsersMappers.xml" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/domain/Users.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/MybatisProvider.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/WithInterface.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/WithXML.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/mapper/UsersMapper.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/BStatement.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/resources/mybatisConfig.xml" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/BSQL执行流程.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/MybatisUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/interceptors/PageInterceptor.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/dbConfig/DruidDataSource.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/interceptors/ShowSql.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/interceptors/PagePlugin.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/B一条SQL的执行流程.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/插件C.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/StatementHandler.java" />
+        <option value="$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/C插件.java" />
+      </list>
+    </option>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" x="-120" y="-24" width="1920" height="1018" extendedState="6" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="mybatis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatis-3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mybatis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatis-3" type="462c0819:PsiDirectoryNode" />
+              <item name="source-mybatis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mybatis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatis-3" type="462c0819:PsiDirectoryNode" />
+              <item name="source-mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mybatis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatis-3" type="462c0819:PsiDirectoryNode" />
+              <item name="source-mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mybatis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatis-3" type="462c0819:PsiDirectoryNode" />
+              <item name="source-mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mybatis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatis-3" type="462c0819:PsiDirectoryNode" />
+              <item name="source-mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mybatis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatis-3" type="462c0819:PsiDirectoryNode" />
+              <item name="source-mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="interceptors" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ACache_cache - 2021.02.07 at 17h 24m 44s.xml">
+      <configuration name="ACache.cache" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ACache_cache - 2021.02.07 at 17h 25m 35s.xml">
+      <configuration name="ACache.cache" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ACache_cache - 2021.02.07 at 17h 29m 04s.xml">
+      <configuration name="ACache.cache" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ACache_cache - 2021.02.07 at 17h 29m 07s.xml">
+      <configuration name="ACache.cache" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ACache_cache - 2021.02.07 at 17h 31m 29s.xml">
+      <configuration name="ACache.cache" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ACache_cache - 2021.02.07 at 21h 17m 14s.xml">
+      <configuration name="ACache.cache" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ACache_cache - 2021.02.07 at 21h 17m 42s.xml">
+      <configuration name="ACache.cache" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ACache_cache - 2021.02.07 at 21h 17m 58s.xml">
+      <configuration name="ACache.cache" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ACache_cache - 2021.02.07 at 21h 18m 27s.xml">
+      <configuration name="ACache.cache" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ACache_cache - 2021.02.07 at 21h 20m 07s.xml">
+      <configuration name="ACache.cache" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="47749000" />
+  </component>
+  <component name="ToolWindowManager">
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TypeScript" order="14" />
+      <window_info anchor="bottom" id="Services" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Hierarchy" order="4" weight="0.32983023" />
+      <window_info id="Favorites" order="2" sideWeight="0.91797554" side_tool="true" visible="true" weight="0.16543871" />
+      <window_info anchor="bottom" id="Problems View" order="5" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.2872928" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32872927" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.08202443" visible="true" weight="0.16543871" />
+      <window_info anchor="bottom" id="Flow" order="10" />
+      <window_info anchor="bottom" id="TODO" order="3" />
+      <window_info anchor="bottom" id="Endpoints" order="9" show_stripe_button="false" />
+      <window_info anchor="right" id="Ant" order="3" />
+      <window_info anchor="right" id="Multi Preview" order="5" />
+      <window_info anchor="right" id="Word Book" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info id="Structure" order="1" sideWeight="0.24686192" weight="0.26657736" />
+      <window_info anchor="right" id="Database" order="1" weight="0.21768253" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="13" />
+      <window_info anchor="bottom" id="Terminal" order="16" />
+      <window_info anchor="right" id="Maven" order="0" weight="0.13663764" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5003349" side_tool="true" weight="0.54218537" />
+      <window_info anchor="bottom" id="Build" order="17" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32872927" />
+      <window_info anchor="bottom" id="Debug" order="6" sideWeight="0.4996651" weight="0.20856354" />
+      <window_info anchor="bottom" id="Project Problems" order="15" />
+      <window_info id="Commit" order="3" />
+    </layout>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>boundSql.hasAdditionalParameter(propertyName)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ms.getStatementLog()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>getTransactionalCache(cache)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>localCache.getSize()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/WithInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/A缓存设计.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/WithXML.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/mapper/xml/UsersMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" selection-start-line="9" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/mapper/anno/RolesMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/StaticSqlSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/scripting/defaults/RawSqlSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="56" column="27" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="27" />
+          <folding>
+            <element signature="e#2118#2119#0" expanded="true" />
+            <element signature="e#2173#2174#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/mapping/SqlSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="25" column="44" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/reflection/ParamNameResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="154" column="37" lean-forward="true" selection-start-line="154" selection-start-column="37" selection-end-line="154" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="282" column="30" selection-start-line="282" selection-start-column="30" selection-end-line="282" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/MybatisUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/resultset/ResultSetHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/interceptors/InterceptorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-161">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/resultset/DefaultResultSetHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="357" selection-start-line="357" selection-end-line="357" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source-mybatis/src/main/resources/mybatisConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="67" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.21/mysql-connector-java-8.0.21-sources.jar!/com/mysql/cj/jdbc/Driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1311" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/dbConfig/DruidDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="17" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MAVEN/org.mybatis:my-test:3.5.6">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>org.mybatis:my-test:3.5.6</OriginalElement>
+          <nodes>
+            <node x="0.0" y="624.0">org.mybatis:my-test:3.5.6</node>
+            <node x="130.0" y="470.92857142857144">org.projectlombok:lombok:jar:1.18.16</node>
+            <node x="129.5" y="1110.25">org.mybatis:mybatis:jar:3.5.6</node>
+            <node x="126.5" y="511.92857142857144">org.jboss:jboss-vfs:jar:3.2.15.Final</node>
+            <node x="302.5" y="655.2803571428574">org.jboss:jboss-vfs:jar:3.2.15.Final/org.jboss.logging:jboss-logging:jar:3.1.4.GA</node>
+            <node x="129.5" y="122.0">org.slf4j:slf4j-api:jar:1.7.25</node>
+            <node x="116.5" y="61.0">org.slf4j:slf4j-log4j12:jar:1.7.25</node>
+            <node x="139.5" y="186.125">junit:junit:jar:4.13.1</node>
+            <node x="300.5" y="254.90535714285738">junit:junit:jar:4.13.1/org.hamcrest:hamcrest-core:jar:1.3</node>
+            <node x="89.0" y="388.92857142857144">mysql:mysql-connector-java:jar:8.0.21</node>
+            <node x="303.0" y="493.9053571428574">mysql:mysql-connector-java:jar:8.0.21/com.google.protobuf:protobuf-java:jar:3.11.4</node>
+            <node x="139.0" y="930.0839285714288">ognl:ognl:jar:3.2.15</node>
+            <node x="319.0" y="908.375">ognl:ognl:jar:3.2.15/org.javassist:javassist:jar:3.24.1-GA</node>
+            <node x="128.5" y="889.0839285714288">org.javassist:javassist:jar:3.27.0-GA</node>
+            <node x="137.5" y="0.0">log4j:log4j:jar:1.2.17</node>
+            <node x="122.0" y="552.9285714285714">org.apache.logging.log4j:log4j-core:jar:2.13.3</node>
+            <node x="317.0" y="696.2803571428574">org.apache.logging.log4j:log4j-core:jar:2.13.3/org.apache.logging.log4j:log4j-api:jar:2.13.3</node>
+            <node x="98.5" y="714.3035714285714">commons-logging:commons-logging:jar:1.2</node>
+            <node x="138.0" y="429.92857142857144">cglib:cglib:jar:3.3.0</node>
+            <node x="331.0" y="593.7803571428574">cglib:cglib:jar:3.3.0/org.ow2.asm:asm:jar:7.1</node>
+            <node x="95.5" y="1021.6553571428574">org.junit.jupiter:junit-jupiter-engine:jar:5.7.0</node>
+            <node x="297.0" y="1046.4589285714287">org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.apiguardian:apiguardian-api:jar:1.1.0</node>
+            <node x="280.0" y="979.7803571428574">org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.junit.platform:junit-platform-engine:jar:1.7.0</node>
+            <node x="490.0" y="979.7803571428574">org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.junit.platform:junit-platform-engine:jar:1.7.0/org.opentest4j:opentest4j:jar:1.2.0</node>
+            <node x="450.0" y="1046.4589285714287">org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.junit.platform:junit-platform-engine:jar:1.7.0/org.junit.platform:junit-platform-commons:jar:1.7.0</node>
+            <node x="297.0" y="1107.4589285714287">org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.junit.jupiter:junit-jupiter-api:jar:5.7.0</node>
+            <node x="132.5" y="980.6553571428574">org.hsqldb:hsqldb:jar:2.5.1</node>
+            <node x="135.0" y="755.3035714285714">org.apache.derby:derby:jar:10.14.2.0</node>
+            <node x="145.0" y="268.125">com.h2database:h2:jar:1.4.200</node>
+            <node x="112.5" y="1174.6553571428574">org.mockito:mockito-core:jar:3.5.13</node>
+            <node x="308.5" y="1230.4589285714287">org.mockito:mockito-core:jar:3.5.13/net.bytebuddy:byte-buddy:jar:1.10.15</node>
+            <node x="289.0" y="1148.4589285714287">org.mockito:mockito-core:jar:3.5.13/net.bytebuddy:byte-buddy-agent:jar:1.10.15</node>
+            <node x="315.0" y="1189.4589285714287">org.mockito:mockito-core:jar:3.5.13/org.objenesis:objenesis:jar:3.1</node>
+            <node x="91.5" y="1278.9053571428574">org.mockito:mockito-junit-jupiter:jar:3.5.13</node>
+            <node x="297.0" y="1273.6553571428574">org.mockito:mockito-junit-jupiter:jar:3.5.13/org.junit.jupiter:junit-jupiter-api:jar:5.4.2</node>
+            <node x="91.5" y="347.92857142857144">org.apache.velocity:velocity-engine-core:jar:2.2</node>
+            <node x="295.5" y="534.9053571428574">org.apache.velocity:velocity-engine-core:jar:2.2/org.apache.commons:commons-lang3:jar:3.9</node>
+            <node x="320.0" y="213.90535714285738">org.apache.velocity:velocity-engine-core:jar:2.2/org.slf4j:slf4j-api:jar:1.7.30</node>
+            <node x="120.5" y="227.125">org.postgresql:postgresql:jar:42.2.16</node>
+            <node x="305.0" y="298.5303571428574">org.postgresql:postgresql:jar:42.2.16/org.checkerframework:checker-qual:jar:3.5.0</node>
+            <node x="118.0" y="1069.25">org.assertj:assertj-core:jar:3.17.2</node>
+            <node x="105.0" y="593.9285714285714">eu.codearte.catch-exception:catch-exception:jar:2.0</node>
+            <node x="118.0" y="634.9285714285714">org.testcontainers:junit-jupiter:jar:1.14.3</node>
+            <node x="301.0" y="452.9053571428574">org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3</node>
+            <node x="330.0" y="339.5303571428574">org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/junit:junit:jar:4.12</node>
+            <node x="320.0" y="64.50315934065941">org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.slf4j:slf4j-api:jar:1.7.25</node>
+            <node x="487.5" y="531.9053571428574">org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.jetbrains:annotations:jar:19.0.0</node>
+            <node x="462.0" y="368.80357142857144">org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.apache.commons:commons-compress:jar:1.20</node>
+            <node x="493.0" y="327.80357142857144">org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth.duct-tape:duct-tape:jar:1.0.8</node>
+            <node x="472.0" y="457.375">org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth.visible-assertions:visible-assertions:jar:2.1.2</node>
+            <node x="457.0" y="130.7531593406594">org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth:tcp-unix-socket-proxy:jar:1.0.2</node>
+            <node x="638.0" y="100.25315934065941">org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth:tcp-unix-socket-proxy:jar:1.0.2/com.kohlschutter.junixsocket:junixsocket-native-common:jar:2.0.4</node>
+            <node x="845.0" y="100.25315934065941">org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth:tcp-unix-socket-proxy:jar:1.0.2/com.kohlschutter.junixsocket:junixsocket-native-common:jar:2.0.4/org.scijava:native-lib-loader:jar:2.0.2</node>
+            <node x="658.0" y="161.2531593406594">org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth:tcp-unix-socket-proxy:jar:1.0.2/com.kohlschutter.junixsocket:junixsocket-common:jar:2.0.4</node>
+            <node x="320.0" y="125.50315934065941">org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth:tcp-unix-socket-proxy:jar:1.0.2/org.slf4j:slf4j-api:jar:1.7.21</node>
+            <node x="486.0" y="572.9053571428574">org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/net.java.dev.jna:jna-platform:jar:5.5.0</node>
+            <node x="711.0" y="572.9053571428574">org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/net.java.dev.jna:jna-platform:jar:5.5.0/net.java.dev.jna:jna:jar:5.5.0</node>
+            <node x="297.0" y="783.5303571428574">org.testcontainers:junit-jupiter:jar:1.14.3/org.junit.jupiter:junit-jupiter-api:jar:5.6.2</node>
+            <node x="120.5" y="848.0839285714288">org.testcontainers:postgresql:jar:1.14.3</node>
+            <node x="330.0" y="737.2803571428574">org.testcontainers:postgresql:jar:1.14.3/org.testcontainers:jdbc:jar:1.14.3</node>
+            <node x="464.0" y="732.0303571428574">org.testcontainers:postgresql:jar:1.14.3/org.testcontainers:jdbc:jar:1.14.3/org.testcontainers:database-commons:jar:1.14.3</node>
+            <node x="135.0" y="807.0839285714288">org.testcontainers:mysql:jar:1.14.3</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth:tcp-unix-socket-proxy:jar:1.0.2/org.slf4j:slf4j-api:jar:1.7.21" target="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.slf4j:slf4j-api:jar:1.7.25">
+              <point x="0.0" y="-10.5" />
+              <point x="0.0" y="10.5" />
+            </edge>
+            <edge source="org.apache.velocity:velocity-engine-core:jar:2.2/org.slf4j:slf4j-api:jar:1.7.30" target="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.slf4j:slf4j-api:jar:1.7.25">
+              <point x="-35.0" y="-7.0" />
+              <point x="270.0" y="217.40535714285738" />
+              <point x="270.0" y="82.00315934065941" />
+              <point x="-35.0" y="7.0" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="org.assertj:assertj-core:jar:3.17.2">
+              <point x="34.5" y="7.673076923076906" />
+              <point x="89.0" y="1079.75" />
+              <point x="-46.5" y="-0.0" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="log4j:log4j:jar:1.2.17">
+              <point x="34.5" y="-10.096153846153811" />
+              <point x="89.0" y="10.5" />
+              <point x="-27.0" y="-0.0" />
+            </edge>
+            <edge source="org.testcontainers:postgresql:jar:1.14.3/org.testcontainers:jdbc:jar:1.14.3" target="org.testcontainers:postgresql:jar:1.14.3/org.testcontainers:jdbc:jar:1.14.3/org.testcontainers:database-commons:jar:1.14.3">
+              <point x="25.0" y="-0.0" />
+              <point x="-70.0" y="5.25" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="org.mybatis:mybatis:jar:3.5.6">
+              <point x="34.5" y="8.480769230769283" />
+              <point x="89.0" y="1120.75" />
+              <point x="-35.0" y="-0.0" />
+            </edge>
+            <edge source="org.mockito:mockito-junit-jupiter:jar:3.5.13" target="org.mockito:mockito-core:jar:3.5.13">
+              <point x="0.0" y="-10.5" />
+              <point x="0.0" y="10.5" />
+            </edge>
+            <edge source="org.mockito:mockito-core:jar:3.5.13" target="org.mockito:mockito-core:jar:3.5.13/net.bytebuddy:byte-buddy-agent:jar:1.10.15">
+              <point x="52.0" y="-7.0" />
+              <point x="240.0" y="1178.1553571428574" />
+              <point x="260.0" y="1158.9589285714287" />
+              <point x="-66.0" y="-0.0" />
+            </edge>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth:tcp-unix-socket-proxy:jar:1.0.2/com.kohlschutter.junixsocket:junixsocket-native-common:jar:2.0.4" target="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth:tcp-unix-socket-proxy:jar:1.0.2/com.kohlschutter.junixsocket:junixsocket-native-common:jar:2.0.4/org.scijava:native-lib-loader:jar:2.0.2">
+              <point x="93.5" y="-0.0" />
+              <point x="-60.5" y="-0.0" />
+            </edge>
+            <edge source="junit:junit:jar:4.13.1" target="junit:junit:jar:4.13.1/org.hamcrest:hamcrest-core:jar:1.3">
+              <point x="25.0" y="-5.25" />
+              <point x="240.0" y="191.375" />
+              <point x="260.0" y="265.4053571428574" />
+              <point x="-54.5" y="-0.0" />
+            </edge>
+            <edge source="org.slf4j:slf4j-log4j12:jar:1.7.25" target="org.slf4j:slf4j-api:jar:1.7.25">
+              <point x="0.0" y="10.5" />
+              <point x="0.0" y="-10.5" />
+            </edge>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3" target="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth:tcp-unix-socket-proxy:jar:1.0.2">
+              <point x="54.0" y="-9.0" />
+              <point x="430.0" y="454.4053571428574" />
+              <point x="-77.0" y="5.25" />
+            </edge>
+            <edge source="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.junit.platform:junit-platform-engine:jar:1.7.0" target="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.junit.platform:junit-platform-engine:jar:1.7.0/org.opentest4j:opentest4j:jar:1.2.0">
+              <point x="75.0" y="-5.25" />
+              <point x="-44.0" y="-5.25" />
+            </edge>
+            <edge source="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0" target="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.junit.jupiter:junit-jupiter-api:jar:5.7.0">
+              <point x="69.0" y="7.0" />
+              <point x="260.0" y="1117.9589285714287" />
+              <point x="-58.0" y="-0.0" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="org.mockito:mockito-core:jar:3.5.13">
+              <point x="34.5" y="9.288461538461547" />
+              <point x="89.0" y="1185.1553571428574" />
+              <point x="-52.0" y="-0.0" />
+            </edge>
+            <edge source="org.mockito:mockito-junit-jupiter:jar:3.5.13" target="org.mockito:mockito-junit-jupiter:jar:3.5.13/org.junit.jupiter:junit-jupiter-api:jar:5.4.2">
+              <point x="73.0" y="-0.0" />
+              <point x="-58.0" y="5.25" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="org.hsqldb:hsqldb:jar:2.5.1">
+              <point x="34.5" y="6.057692307692264" />
+              <point x="89.0" y="991.1553571428574" />
+              <point x="-32.0" y="-0.0" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="ognl:ognl:jar:3.2.15">
+              <point x="34.5" y="5.25" />
+              <point x="89.0" y="940.5839285714288" />
+              <point x="-25.5" y="-0.0" />
+            </edge>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3" target="org.testcontainers:junit-jupiter:jar:1.14.3/org.junit.jupiter:junit-jupiter-api:jar:5.6.2">
+              <point x="46.5" y="5.25" />
+              <point x="240.0" y="650.6785714285714" />
+              <point x="260.0" y="788.7803571428574" />
+              <point x="-58.0" y="-5.25" />
+            </edge>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth:tcp-unix-socket-proxy:jar:1.0.2" target="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth:tcp-unix-socket-proxy:jar:1.0.2/com.kohlschutter.junixsocket:junixsocket-common:jar:2.0.4">
+              <point x="77.0" y="5.25" />
+              <point x="638.0" y="171.7531593406594" />
+              <point x="-73.5" y="-0.0" />
+            </edge>
+            <edge source="org.postgresql:postgresql:jar:42.2.16" target="org.postgresql:postgresql:jar:42.2.16/org.checkerframework:checker-qual:jar:3.5.0">
+              <point x="44.0" y="-0.0" />
+              <point x="240.0" y="237.625" />
+              <point x="260.0" y="309.0303571428574" />
+              <point x="-50.0" y="-0.0" />
+            </edge>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3" target="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth.duct-tape:duct-tape:jar:1.0.8">
+              <point x="54.0" y="-6.0" />
+              <point x="430.0" y="457.4053571428574" />
+              <point x="450.0" y="338.30357142857144" />
+              <point x="-41.0" y="-0.0" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="org.apache.velocity:velocity-engine-core:jar:2.2">
+              <point x="34.5" y="-5.25" />
+              <point x="-73.0" y="-0.0" />
+            </edge>
+            <edge source="org.testcontainers:postgresql:jar:1.14.3/org.testcontainers:jdbc:jar:1.14.3/org.testcontainers:database-commons:jar:1.14.3" target="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3">
+              <point x="-70.0" y="-5.25" />
+              <point x="450.0" y="737.2803571428574" />
+              <point x="430.0" y="472.4053571428574" />
+              <point x="54.0" y="9.0" />
+            </edge>
+            <edge source="ognl:ognl:jar:3.2.15/org.javassist:javassist:jar:3.24.1-GA" target="org.javassist:javassist:jar:3.27.0-GA">
+              <point x="-36.0" y="-5.25" />
+              <point x="260.0" y="913.625" />
+              <point x="240.0" y="899.5839285714288" />
+              <point x="36.0" y="-0.0" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="org.mockito:mockito-junit-jupiter:jar:3.5.13">
+              <point x="34.5" y="10.096153846153811" />
+              <point x="-73.0" y="-0.0" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="org.jboss:jboss-vfs:jar:3.2.15.Final">
+              <point x="34.5" y="-2.0192307692307168" />
+              <point x="89.0" y="522.4285714285714" />
+              <point x="-38.0" y="-0.0" />
+            </edge>
+            <edge source="org.testcontainers:postgresql:jar:1.14.3" target="org.testcontainers:postgresql:jar:1.14.3/org.testcontainers:jdbc:jar:1.14.3">
+              <point x="44.0" y="-0.0" />
+              <point x="240.0" y="858.5839285714288" />
+              <point x="260.0" y="753.0303571428574" />
+              <point x="-25.0" y="5.25" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="org.apache.logging.log4j:log4j-core:jar:2.13.3">
+              <point x="34.5" y="-1.2115384615384528" />
+              <point x="89.0" y="563.4285714285714" />
+              <point x="-42.5" y="-0.0" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="eu.codearte.catch-exception:catch-exception:jar:2.0">
+              <point x="34.5" y="-0.4038461538461888" />
+              <point x="89.0" y="604.4285714285714" />
+              <point x="-59.5" y="-0.0" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="mysql:mysql-connector-java:jar:8.0.21">
+              <point x="34.5" y="-4.442307692307736" />
+              <point x="-75.5" y="-0.0" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="org.testcontainers:junit-jupiter:jar:1.14.3">
+              <point x="34.5" y="0.4038461538461888" />
+              <point x="89.0" y="645.4285714285714" />
+              <point x="-46.5" y="-0.0" />
+            </edge>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth:tcp-unix-socket-proxy:jar:1.0.2" target="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth:tcp-unix-socket-proxy:jar:1.0.2/org.slf4j:slf4j-api:jar:1.7.21">
+              <point x="-77.0" y="-5.25" />
+              <point x="35.0" y="-0.0" />
+            </edge>
+            <edge source="org.testcontainers:mysql:jar:1.14.3" target="org.testcontainers:postgresql:jar:1.14.3/org.testcontainers:jdbc:jar:1.14.3">
+              <point x="29.5" y="-0.0" />
+              <point x="240.0" y="817.5839285714288" />
+              <point x="260.0" y="742.5303571428574" />
+              <point x="-25.0" y="-5.25" />
+            </edge>
+            <edge source="org.apache.velocity:velocity-engine-core:jar:2.2" target="org.apache.velocity:velocity-engine-core:jar:2.2/org.slf4j:slf4j-api:jar:1.7.30">
+              <point x="73.0" y="-5.25" />
+              <point x="260.0" y="231.40535714285738" />
+              <point x="-35.0" y="7.0" />
+            </edge>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3" target="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.apache.commons:commons-compress:jar:1.20">
+              <point x="54.0" y="-3.0" />
+              <point x="430.0" y="460.4053571428574" />
+              <point x="-72.0" y="-0.0" />
+            </edge>
+            <edge source="mysql:mysql-connector-java:jar:8.0.21" target="mysql:mysql-connector-java:jar:8.0.21/com.google.protobuf:protobuf-java:jar:3.11.4">
+              <point x="75.5" y="-0.0" />
+              <point x="260.0" y="504.4053571428574" />
+              <point x="-52.0" y="-0.0" />
+            </edge>
+            <edge source="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.junit.jupiter:junit-jupiter-api:jar:5.7.0" target="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.junit.platform:junit-platform-engine:jar:1.7.0/org.junit.platform:junit-platform-commons:jar:1.7.0">
+              <point x="58.0" y="5.25" />
+              <point x="430.0" y="1123.2089285714287" />
+              <point x="-84.0" y="7.0" />
+            </edge>
+            <edge source="org.mockito:mockito-junit-jupiter:jar:3.5.13/org.junit.jupiter:junit-jupiter-api:jar:5.4.2" target="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.junit.jupiter:junit-jupiter-api:jar:5.7.0">
+              <point x="-58.0" y="-5.25" />
+              <point x="260.0" y="1278.9053571428574" />
+              <point x="260.0" y="1124.9589285714287" />
+              <point x="-58.0" y="7.0" />
+            </edge>
+            <edge source="org.slf4j:slf4j-log4j12:jar:1.7.25" target="log4j:log4j:jar:1.2.17">
+              <point x="0.0" y="-10.5" />
+              <point x="0.0" y="10.5" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="commons-logging:commons-logging:jar:1.2">
+              <point x="34.5" y="1.2115384615384528" />
+              <point x="-66.0" y="-0.0" />
+            </edge>
+            <edge source="cglib:cglib:jar:3.3.0" target="cglib:cglib:jar:3.3.0/org.ow2.asm:asm:jar:7.1">
+              <point x="26.5" y="-0.0" />
+              <point x="240.0" y="440.42857142857144" />
+              <point x="260.0" y="604.2803571428574" />
+              <point x="-24.0" y="-0.0" />
+            </edge>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3" target="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/junit:junit:jar:4.12">
+              <point x="0.0" y="-10.5" />
+              <point x="0.0" y="10.5" />
+            </edge>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3" target="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/net.java.dev.jna:jna-platform:jar:5.5.0">
+              <point x="54.0" y="6.0" />
+              <point x="430.0" y="469.4053571428574" />
+              <point x="450.0" y="583.4053571428574" />
+              <point x="-48.0" y="-0.0" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="org.slf4j:slf4j-log4j12:jar:1.7.25">
+              <point x="34.5" y="-9.288461538461547" />
+              <point x="89.0" y="71.5" />
+              <point x="-48.0" y="-0.0" />
+            </edge>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3" target="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth.visible-assertions:visible-assertions:jar:2.1.2">
+              <point x="54.0" y="-0.0" />
+              <point x="430.0" y="463.4053571428574" />
+              <point x="450.0" y="467.875" />
+              <point x="-62.0" y="-0.0" />
+            </edge>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3" target="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3">
+              <point x="46.5" y="-5.25" />
+              <point x="240.0" y="640.1785714285714" />
+              <point x="260.0" y="468.6553571428574" />
+              <point x="-54.0" y="5.25" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="junit:junit:jar:4.13.1">
+              <point x="34.5" y="-7.673076923076906" />
+              <point x="89.0" y="196.625" />
+              <point x="-25.0" y="-0.0" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="org.projectlombok:lombok:jar:1.18.16">
+              <point x="34.5" y="-2.8269230769230944" />
+              <point x="89.0" y="481.42857142857144" />
+              <point x="-34.5" y="-0.0" />
+            </edge>
+            <edge source="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.junit.platform:junit-platform-engine:jar:1.7.0/org.junit.platform:junit-platform-commons:jar:1.7.0" target="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.apiguardian:apiguardian-api:jar:1.1.0">
+              <point x="-84.0" y="-0.0" />
+              <point x="58.0" y="-0.0" />
+            </edge>
+            <edge source="org.apache.logging.log4j:log4j-core:jar:2.13.3" target="org.apache.logging.log4j:log4j-core:jar:2.13.3/org.apache.logging.log4j:log4j-api:jar:2.13.3">
+              <point x="42.5" y="-0.0" />
+              <point x="240.0" y="563.4285714285714" />
+              <point x="260.0" y="706.7803571428574" />
+              <point x="-38.0" y="-0.0" />
+            </edge>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3/org.junit.jupiter:junit-jupiter-api:jar:5.6.2" target="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.junit.jupiter:junit-jupiter-api:jar:5.7.0">
+              <point x="-58.0" y="5.25" />
+              <point x="260.0" y="799.2803571428574" />
+              <point x="260.0" y="1110.9589285714287" />
+              <point x="-58.0" y="-7.0" />
+            </edge>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/junit:junit:jar:4.12" target="junit:junit:jar:4.13.1">
+              <point x="-25.0" y="-0.0" />
+              <point x="260.0" y="350.0303571428574" />
+              <point x="240.0" y="201.875" />
+              <point x="25.0" y="5.25" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="org.apache.derby:derby:jar:10.14.2.0">
+              <point x="34.5" y="2.0192307692307168" />
+              <point x="89.0" y="765.8035714285714" />
+              <point x="-29.5" y="-0.0" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="org.postgresql:postgresql:jar:42.2.16">
+              <point x="34.5" y="-6.865384615384642" />
+              <point x="89.0" y="237.625" />
+              <point x="-44.0" y="-0.0" />
+            </edge>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth:tcp-unix-socket-proxy:jar:1.0.2" target="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth:tcp-unix-socket-proxy:jar:1.0.2/com.kohlschutter.junixsocket:junixsocket-native-common:jar:2.0.4">
+              <point x="77.0" y="-5.25" />
+              <point x="-93.5" y="-0.0" />
+            </edge>
+            <edge source="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.junit.platform:junit-platform-engine:jar:1.7.0" target="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.junit.platform:junit-platform-engine:jar:1.7.0/org.junit.platform:junit-platform-commons:jar:1.7.0">
+              <point x="75.0" y="5.25" />
+              <point x="-84.0" y="-7.0" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="org.javassist:javassist:jar:3.27.0-GA">
+              <point x="34.5" y="4.442307692307736" />
+              <point x="89.0" y="899.5839285714288" />
+              <point x="-36.0" y="-0.0" />
+            </edge>
+            <edge source="org.mockito:mockito-core:jar:3.5.13" target="org.mockito:mockito-core:jar:3.5.13/org.objenesis:objenesis:jar:3.1">
+              <point x="52.0" y="-0.0" />
+              <point x="240.0" y="1185.1553571428574" />
+              <point x="260.0" y="1199.9589285714287" />
+              <point x="-40.0" y="-0.0" />
+            </edge>
+            <edge source="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.junit.jupiter:junit-jupiter-api:jar:5.7.0" target="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.apiguardian:apiguardian-api:jar:1.1.0">
+              <point x="0.0" y="-10.5" />
+              <point x="0.0" y="10.5" />
+            </edge>
+            <edge source="org.apache.velocity:velocity-engine-core:jar:2.2/org.slf4j:slf4j-api:jar:1.7.30" target="org.slf4j:slf4j-api:jar:1.7.25">
+              <point x="-35.0" y="-0.0" />
+              <point x="260.0" y="224.40535714285738" />
+              <point x="240.0" y="139.5" />
+              <point x="35.0" y="7.0" />
+            </edge>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth:tcp-unix-socket-proxy:jar:1.0.2/org.slf4j:slf4j-api:jar:1.7.21" target="org.slf4j:slf4j-api:jar:1.7.25">
+              <point x="-35.0" y="-0.0" />
+              <point x="260.0" y="136.0031593406594" />
+              <point x="240.0" y="132.5" />
+              <point x="35.0" y="-0.0" />
+            </edge>
+            <edge source="org.mockito:mockito-core:jar:3.5.13" target="org.mockito:mockito-core:jar:3.5.13/net.bytebuddy:byte-buddy:jar:1.10.15">
+              <point x="52.0" y="7.0" />
+              <point x="240.0" y="1192.1553571428574" />
+              <point x="260.0" y="1240.9589285714287" />
+              <point x="-46.5" y="-0.0" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="com.h2database:h2:jar:1.4.200">
+              <point x="34.5" y="-6.057692307692264" />
+              <point x="89.0" y="278.625" />
+              <point x="-19.5" y="-0.0" />
+            </edge>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/net.java.dev.jna:jna-platform:jar:5.5.0" target="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/net.java.dev.jna:jna-platform:jar:5.5.0/net.java.dev.jna:jna:jar:5.5.0">
+              <point x="48.0" y="-0.0" />
+              <point x="-20.5" y="-0.0" />
+            </edge>
+            <edge source="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.junit.jupiter:junit-jupiter-api:jar:5.7.0" target="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.junit.platform:junit-platform-engine:jar:1.7.0/org.opentest4j:opentest4j:jar:1.2.0">
+              <point x="58.0" y="-5.25" />
+              <point x="430.0" y="1112.7089285714287" />
+              <point x="450.0" y="995.5303571428574" />
+              <point x="-44.0" y="5.25" />
+            </edge>
+            <edge source="org.apache.velocity:velocity-engine-core:jar:2.2" target="org.apache.velocity:velocity-engine-core:jar:2.2/org.apache.commons:commons-lang3:jar:3.9">
+              <point x="73.0" y="5.25" />
+              <point x="260.0" y="545.4053571428574" />
+              <point x="-59.5" y="-0.0" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="cglib:cglib:jar:3.3.0">
+              <point x="34.5" y="-3.6346153846153584" />
+              <point x="89.0" y="440.42857142857144" />
+              <point x="-26.5" y="-0.0" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0">
+              <point x="34.5" y="6.865384615384642" />
+              <point x="-69.0" y="-0.0" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="org.testcontainers:mysql:jar:1.14.3">
+              <point x="34.5" y="2.8269230769230944" />
+              <point x="89.0" y="817.5839285714288" />
+              <point x="-29.5" y="-0.0" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="org.slf4j:slf4j-api:jar:1.7.25">
+              <point x="34.5" y="-8.480769230769283" />
+              <point x="89.0" y="132.5" />
+              <point x="-35.0" y="-0.0" />
+            </edge>
+            <edge source="ognl:ognl:jar:3.2.15" target="ognl:ognl:jar:3.2.15/org.javassist:javassist:jar:3.24.1-GA">
+              <point x="25.5" y="-0.0" />
+              <point x="240.0" y="940.5839285714288" />
+              <point x="260.0" y="924.125" />
+              <point x="-36.0" y="5.25" />
+            </edge>
+            <edge source="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0" target="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.junit.platform:junit-platform-engine:jar:1.7.0">
+              <point x="69.0" y="-7.0" />
+              <point x="260.0" y="990.2803571428574" />
+              <point x="-75.0" y="-0.0" />
+            </edge>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3" target="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.slf4j:slf4j-api:jar:1.7.25">
+              <point x="-54.0" y="-5.25" />
+              <point x="260.0" y="458.1553571428574" />
+              <point x="260.0" y="75.00315934065941" />
+              <point x="-35.0" y="-0.0" />
+            </edge>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.slf4j:slf4j-api:jar:1.7.25" target="org.slf4j:slf4j-api:jar:1.7.25">
+              <point x="-35.0" y="-7.0" />
+              <point x="260.0" y="68.00315934065941" />
+              <point x="240.0" y="125.5" />
+              <point x="35.0" y="-7.0" />
+            </edge>
+            <edge source="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.junit.platform:junit-platform-engine:jar:1.7.0" target="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.apiguardian:apiguardian-api:jar:1.1.0">
+              <point x="0.0" y="10.5" />
+              <point x="0.0" y="-10.5" />
+            </edge>
+            <edge source="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0" target="org.junit.jupiter:junit-jupiter-engine:jar:5.7.0/org.apiguardian:apiguardian-api:jar:1.1.0">
+              <point x="69.0" y="-0.0" />
+              <point x="260.0" y="1056.9589285714287" />
+              <point x="-58.0" y="-0.0" />
+            </edge>
+            <edge source="org.mybatis:my-test:3.5.6" target="org.testcontainers:postgresql:jar:1.14.3">
+              <point x="34.5" y="3.6346153846153584" />
+              <point x="89.0" y="858.5839285714288" />
+              <point x="-44.0" y="-0.0" />
+            </edge>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3" target="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.jetbrains:annotations:jar:19.0.0">
+              <point x="54.0" y="3.0" />
+              <point x="430.0" y="466.4053571428574" />
+              <point x="450.0" y="542.4053571428574" />
+              <point x="-46.5" y="-0.0" />
+            </edge>
+            <edge source="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth:tcp-unix-socket-proxy:jar:1.0.2/com.kohlschutter.junixsocket:junixsocket-native-common:jar:2.0.4" target="org.testcontainers:junit-jupiter:jar:1.14.3/org.testcontainers:testcontainers:jar:1.14.3/org.rnorth:tcp-unix-socket-proxy:jar:1.0.2/com.kohlschutter.junixsocket:junixsocket-common:jar:2.0.4">
+              <point x="0.0" y="10.5" />
+              <point x="0.0" y="-10.5" />
+            </edge>
+            <edge source="org.jboss:jboss-vfs:jar:3.2.15.Final" target="org.jboss:jboss-vfs:jar:3.2.15.Final/org.jboss.logging:jboss-logging:jar:3.1.4.GA">
+              <point x="38.0" y="-0.0" />
+              <point x="240.0" y="522.4285714285714" />
+              <point x="260.0" y="665.7803571428574" />
+              <point x="-52.5" y="-0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.9659090909090909" x="362.54938034560996" y="801.2941176470588" />
+          <SelectedNodes>
+            <node>org.mybatis:my-test:3.5.6</node>
+          </SelectedNodes>
+          <Categories />
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source-mybatis/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/plugin/InterceptorChain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/scripting/LanguageDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/mapping/BoundSql.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="64" column="35" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/type/BaseTypeHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/type/IntegerTypeHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/scripting/xmltags/XMLLanguageDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../env/Java/jdk1.8.0_271/src.zip!/java/sql/PreparedStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-323">
+          <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/plugin/Plugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/BaseStatementHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../env/Java/jdk1.8.0_271/src.zip!/java/sql/Statement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/logging/jdbc/PreparedStatementLogger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="58" column="26" lean-forward="true" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/RoutingStatementHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.21/mysql-connector-java-8.0.21-sources.jar!/com/mysql/cj/jdbc/ClientPreparedStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="314" selection-start-line="314" selection-end-line="314" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/PreparedStatementHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="148" column="23" selection-start-line="148" selection-start-column="23" selection-end-line="148" selection-end-column="23" />
+          <folding>
+            <element signature="e#2426#2427#0" expanded="true" />
+            <element signature="e#2474#2475#0" expanded="true" />
+            <element signature="e#4804#4805#0" expanded="true" />
+            <element signature="e#4853#4854#0" expanded="true" />
+            <element signature="e#9747#9748#0" expanded="true" />
+            <element signature="e#9817#9818#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/CachingExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-227">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/BaseExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="328" selection-start-line="328" selection-end-line="328" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/interceptors/ShowSql.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="39" column="68" selection-start-line="39" selection-start-column="68" selection-end-line="39" selection-end-column="68" />
+          <folding>
+            <element signature="e#446#470#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../env/Java/jdk1.8.0_271/src.zip!/java/lang/SuppressWarnings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/reflection/MetaObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="125" column="48" selection-start-line="125" selection-start-column="48" selection-end-line="125" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/SimpleExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="920">
+          <caret line="68" column="11" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
+          <folding>
+            <element signature="e#1413#1414#0" expanded="true" />
+            <element signature="e#1456#1457#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/scripting/defaults/DefaultParameterHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="61" column="21" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
+          <folding>
+            <element signature="e#2157#2158#0" expanded="true" />
+            <element signature="e#2189#2190#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/B一条SQL的执行流程.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/parameter/ParameterHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="27" selection-start-line="27" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/interceptors/PagePlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#439#463#0" expanded="true" />
+            <element signature="e#1822#1823#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/ResultHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="22" column="62" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="676" column="23" selection-start-line="676" selection-start-column="23" selection-end-line="676" selection-end-column="23" />
+          <folding>
+            <element signature="e#16358#16359#0" expanded="true" />
+            <element signature="e#16397#16398#0" expanded="true" />
+            <element signature="e#28664#28665#0" expanded="true" />
+            <element signature="e#28724#28725#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/Executor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="36" selection-start-line="36" selection-end-line="64" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/StatementHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source-mybatis/src/main/java/source/mybatis/C插件.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#687#711#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI" />
+      <state key="GlobalLibrariesConfigurable.UI" />
+      <state key="JdkListConfigurable.UI" />
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>mybatis</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.60414267" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI" />
+    </states>
+  </component>
+</project>
