@@ -1,7 +1,9 @@
 package source.mybatis.domain;
 
 
-public class Users {
+import java.io.Serializable;
+
+public class Users implements Serializable {
 
   private Integer id;
   private String username;

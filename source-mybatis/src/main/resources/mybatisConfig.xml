@@ -27,6 +27,6 @@
 
         <!--package和mapper可以同时存在，但是namespace不能重复-->
         <!--package: 扫描包下所有的mapper然后进行加载-->
-<!--        <package name="source.mybatis.mapper"/>-->
+        <package name="source.mybatis.mapper.anno"/>
     </mappers>
 </configuration>

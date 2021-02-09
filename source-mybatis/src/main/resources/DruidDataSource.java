@@ -13,7 +13,7 @@ public class DruidDataSource {
     // 2.定义配置文件
     // 3.加载配置文件
     Properties pro = new Properties();
-    InputStream is = source.mybatis.environmentConfig.DruidDataSource.class.getClassLoader().getResourceAsStream("druid.properties");
+    InputStream is = source.mybatis.dbConfig.DruidDataSource.class.getClassLoader().getResourceAsStream("druid.properties");
     pro.load(is);
     DataSource dataSource = DruidDataSourceFactory.createDataSource(pro);
     Connection connection = dataSource.getConnection();

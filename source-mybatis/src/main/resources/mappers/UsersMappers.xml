@@ -2,10 +2,10 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="source.mybatis.domain.Users">
+<mapper namespace="source.mybatis.mapper.xml.UsersMapper">
     <cache/>
-    <select id="selectOne" resultType="source.mybatis.domain.Users">
-    select * from users where id = 1
+    <select id="selectById" parameterType="Integer" resultType="source.mybatis.domain.Users">
+    select * from users where id = #{id}
   </select>
 </mapper>
 

@@ -644,6 +644,7 @@ public class Configuration {
     public StatementHandler newStatementHandler(Executor executor, MappedStatement mappedStatement, Object parameterObject, RowBounds rowBounds, ResultHandler resultHandler, BoundSql boundSql) {
 
         // switch case 三选一，默认是PreparedStatementHandler
+        // parameterHandler和resultHandler都已经构建完成
         StatementHandler statementHandler = new RoutingStatementHandler(executor, mappedStatement, parameterObject, rowBounds, resultHandler, boundSql);
 
         //
