@@ -14,9 +14,6 @@ derby.log
 .sts4-cache/
 
 
-# idea
-#.idea/dataSources/**
-#.idea/libraries/**
 #*.iws
 #*.iml
 #*.ipr
