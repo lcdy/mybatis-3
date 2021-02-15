@@ -1,6 +1,7 @@
 package source.mybatis;
 
 import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
@@ -49,5 +50,12 @@ public class MybatisUtils {
         } else {
             return getSessionFactory().openSession();
         }
+    }
+
+    public static Configuration getConfiguration() throws IOException {
+        if (sqlSessionFactory == null) {
+            getSessionFactory();
+        }
+        return sqlSessionFactory.getConfiguration();
     }
 }

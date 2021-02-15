@@ -28,6 +28,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class MapperProxyFactory<T> {
 
+  // 需要创建代理对象的接口
   private final Class<T> mapperInterface;
   private final Map<Method, MapperMethodInvoker> methodCache = new ConcurrentHashMap<>();
 
@@ -45,10 +46,11 @@ public class MapperProxyFactory<T> {
 
   @SuppressWarnings("unchecked")
   protected T newInstance(MapperProxy<T> mapperProxy) {
-    // jdk动态代理：classLoader，实现的接口，invokeHandler。重点看看invoktionHandler干了啥
+    // jdk动态代理：classLoader，实现的接口，invokeHandler。重点看看invokeHandler干了啥
     return (T) Proxy.newProxyInstance(mapperInterface.getClassLoader(), new Class[] { mapperInterface }, mapperProxy);
   }
 
+  // 更名为sqlSessionWrapper or invokeHandler
   public T newInstance(SqlSession sqlSession) {
     final MapperProxy<T> mapperProxy = new MapperProxy<>(sqlSession, mapperInterface, methodCache);
     return newInstance(mapperProxy);

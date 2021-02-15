@@ -41,7 +41,7 @@ public class B一条SQL的执行流程 {
         SqlSessionFactory sessionFactory = MybatisUtils.getSessionFactory();
         Configuration configuration = sessionFactory.getConfiguration();
         // 注册一个插件
-        configuration.addInterceptor(new PagePlugin());
+        // configuration.addInterceptor(new PagePlugin());
         Collection<String> mappedStatementNames = configuration.getMappedStatementNames();
         for (String mappedStatement : mappedStatementNames) {
             System.out.println(mappedStatement);

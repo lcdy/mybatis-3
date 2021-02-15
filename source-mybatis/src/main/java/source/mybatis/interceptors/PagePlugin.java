@@ -6,8 +6,10 @@ import org.apache.ibatis.plugin.*;
 import org.apache.ibatis.reflection.DefaultReflectorFactory;
 import org.apache.ibatis.reflection.MetaObject;
 import org.apache.ibatis.reflection.SystemMetaObject;
+import source.mybatis.Page;
 
 import java.sql.Connection;
+import java.util.Map;
 import java.util.Properties;
 
 /**
@@ -18,7 +20,7 @@ import java.util.Properties;
 @SuppressWarnings("all")
 @Intercepts(@Signature(
         // type = StatementHandler.class,
-        type = ParameterHandler.class,
+        type = StatementHandler.class,
         method = "prepare",
         args = {Connection.class, Integer.class}
 ))
@@ -27,16 +29,25 @@ public class PagePlugin implements Interceptor {
     public Object intercept(Invocation invocation) throws Throwable {
         // Invocation：封装了type,method,args。就是对拦截对象的方法的封装
         StatementHandler statementHandler = (StatementHandler) invocation.getTarget();
+        Map parameterObject = (Map<String, Object>) statementHandler.getParameterHandler().getParameterObject();
         assert invocation.getMethod().getName().equals("prepare");
         MetaObject metaObject = MetaObject.forObject(
                 statementHandler, SystemMetaObject.DEFAULT_OBJECT_FACTORY,
                 SystemMetaObject.DEFAULT_OBJECT_WRAPPER_FACTORY, new DefaultReflectorFactory()
         );
-        Object methodName = metaObject.getValue("delegate.mappedStatement.id");
-        Object value = metaObject.getValue("delegate.boundSql.sql");
-        System.out.println("\t\033[31;1m" + methodName.toString() + "\033[0m");
-        System.out.println("\t\033[31;1m" + value.toString() + "\033[0m");
-        metaObject.setValue("delegate.boundSql.sql", value.toString()+" limit 1");
+        Page page = (Page) parameterObject.get("page");
+        if (page != null) {
+            String value = (String) metaObject.getValue("boundSql.sql");
+            Integer pageNum = page.getPageNum();
+            Integer size = page.getSize();
+            Integer starterId = page.getStarterId();
+            int id = (pageNum - 1) * size + starterId - 1;
+            // >  num * size + 起始id - 1  limit size;
+            value = value + " where id > " + id + " limit " + size;
+
+            // 重新设置sql
+            metaObject.setValue("boundSql.sql", value);
+        }
         return invocation.proceed();
     }
 
