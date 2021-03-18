@@ -3,7 +3,7 @@ package source.mybatis;
 import org.apache.ibatis.session.*;
 import source.mybatis.domain.Roles;
 import source.mybatis.interceptors.PagePlugin;
-import source.mybatis.mapper.anno.RolesMapper;
+import source.mybatis.mappers.anno.RolesMapper;
 
 import java.io.IOException;
 import java.util.List;
@@ -15,11 +15,11 @@ import java.util.List;
  */
 @SuppressWarnings("all")
 public class C插件 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         // 四个对象的接口共有哪些方法可以拦截，合理选择
         Configuration configuration = MybatisUtils.getConfiguration();
         configuration.addInterceptor(new PagePlugin());
-        SqlSession sqlSession = MybatisUtils.getSqlSession();
+        SqlSession sqlSession = MybatisUtils.getSessionFactory().openSession();
         RolesMapper mapper = sqlSession.getMapper(RolesMapper.class);
         // System.out.println(mapper.selectById(1));
         // List<Roles> roles = mapper.selectListTwoParameter(10, 2);
@@ -40,6 +40,8 @@ public class C插件 {
             System.out.println(role);
         }
     }
+
+
 
     /**
      * 只有两个方法，PreparedStatement属于java.sql包，原则上不能改其属性

@@ -39,7 +39,7 @@ import org.apache.ibatis.transaction.Transaction;
 public class CachingExecutor implements Executor {
 
   private final Executor delegate;
-  private final TransactionalCacheManager tcm = new TransactionalCacheManager();
+  private final TransactionalCacheManager transactionalCacheManager = new TransactionalCacheManager();
 
   public CachingExecutor(Executor delegate) {
     this.delegate = delegate;
@@ -56,9 +56,9 @@ public class CachingExecutor implements Executor {
     try {
       // issues #499, #524 and #573
       if (forceRollback) {
-        tcm.rollback();
+        transactionalCacheManager.rollback();
       } else {
-        tcm.commit();
+        transactionalCacheManager.commit();
       }
     } finally {
       delegate.close(forceRollback);
@@ -101,13 +101,13 @@ public class CachingExecutor implements Executor {
 
         // 查询二级缓存事务缓存管理器
         @SuppressWarnings("unchecked")
-        List<E> list = (List<E>) tcm.getObject(cache, key);
+        List<E> list = (List<E>) transactionalCacheManager.getObject(cache, key);
         if (list == null) {
           // parameterObject == null, resultHandler == null
           // mappedStatement: 全局唯一 = 命名空间+标签id|接口方法名字。
           // boundSql包含sql
           list = delegate.query(mappedStatement, parameterObject, rowBounds, resultHandler, key, boundSql);
-          tcm.putObject(cache, key, list); // issue #578 and #116
+          transactionalCacheManager.putObject(cache, key, list); // issue #578 and #116
         }
         return list;
       }
@@ -124,7 +124,7 @@ public class CachingExecutor implements Executor {
   @Override
   public void commit(boolean required) throws SQLException {
     delegate.commit(required);
-    tcm.commit();
+    transactionalCacheManager.commit();
   }
 
   @Override
@@ -133,7 +133,7 @@ public class CachingExecutor implements Executor {
       delegate.rollback(required);
     } finally {
       if (required) {
-        tcm.rollback();
+        transactionalCacheManager.rollback();
       }
     }
   }
@@ -171,7 +171,7 @@ public class CachingExecutor implements Executor {
   private void flushCacheIfRequired(MappedStatement ms) {
     Cache cache = ms.getCache();
     if (cache != null && ms.isFlushCacheRequired()) {
-      tcm.clear(cache);
+      transactionalCacheManager.clear(cache);
     }
   }
 

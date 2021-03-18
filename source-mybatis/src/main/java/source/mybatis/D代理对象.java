@@ -1,7 +1,7 @@
 package source.mybatis;
 
 import org.apache.ibatis.session.SqlSession;
-import source.mybatis.mapper.anno.RolesMapper;
+import source.mybatis.mappers.anno.RolesMapper;
 
 import java.io.IOException;
 
@@ -12,8 +12,8 @@ import java.io.IOException;
  */
 @SuppressWarnings("all")
 public class D代理对象 {
-    public static void main(String[] args) throws IOException {
-        SqlSession sqlSession = MybatisUtils.getSqlSession();
+    public static void main(String[] args) throws Exception {
+        SqlSession sqlSession = MybatisUtils.getSessionFactory().openSession();
 
         /*
         * MapperProxy implements InvocationHandler

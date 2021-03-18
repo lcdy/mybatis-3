@@ -2,6 +2,7 @@
 <!DOCTYPE configuration
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--所有配置均可通过配置类完成，详见AA流程分析-->
 <configuration>
     <settings>
         <setting name="logImpl" value="slf4j"/>
@@ -18,15 +19,15 @@
         </environment>
     </environments>
     <mappers>
-
-        <!--三选一-->
+        <!--<mapper标签：属性三选一 -->
         <!--url: http协议什么的.xml-->
-        <!--class: 同级目录下名字一样的xml-->
+        <!--class: mapper和xml同一接口-->
         <!--resource: 基于classpath加载xml-->
-        <mapper resource="mappers/UsersMappers.xml"/>
+        <mapper class="source.mybatis.mappers.xml.UsersMapper"/>
+
 
         <!--package和mapper可以同时存在，但是namespace不能重复-->
         <!--package: 扫描包下所有的mapper然后进行加载-->
-        <package name="source.mybatis.mapper.anno"/>
+        <package name="source.mybatis.mappers.anno"/>
     </mappers>
 </configuration>

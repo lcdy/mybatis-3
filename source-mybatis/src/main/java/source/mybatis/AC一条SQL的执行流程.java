@@ -8,9 +8,7 @@ import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import source.mybatis.domain.Users;
-import source.mybatis.interceptors.PagePlugin;
-import source.mybatis.interceptors.ShowSql;
-import source.mybatis.mapper.anno.RolesMapper;
+import source.mybatis.mappers.anno.RolesMapper;
 
 import java.io.IOException;
 import java.util.Collection;
@@ -26,8 +24,8 @@ import java.util.Collection;
  * parameterHandler: parameterValue+BoundSql
  */
 @SuppressWarnings("all")
-public class B一条SQL的执行流程 {
-    public static void main(String[] args) throws IOException {
+public class AC一条SQL的执行流程 {
+    public static void main(String[] args) throws Exception {
         什么是MappedStatement();
         执行示例sql();
     }
@@ -37,7 +35,7 @@ public class B一条SQL的执行流程 {
      * mappedStatement是一个字符串、是一个方法的全限定类名。
      * 包含sql内容，sql类型，参数和返回值的类型
      * */
-    public static void 什么是MappedStatement() throws IOException {
+    public static void 什么是MappedStatement() throws Exception {
         SqlSessionFactory sessionFactory = MybatisUtils.getSessionFactory();
         Configuration configuration = sessionFactory.getConfiguration();
         // 注册一个插件
@@ -48,17 +46,18 @@ public class B一条SQL的执行流程 {
         }
 
         // 测试获取sql
-        MappedStatement mappedStatement = configuration.getMappedStatement("source.mybatis.mapper.xml.UsersMapper.selectById");
+        MappedStatement mappedStatement = configuration.getMappedStatement("source.mybatis.mappers.xml.UsersMapper.selectById");
         SqlSource sqlSource = mappedStatement.getSqlSource();
         // Object parameterObject
         BoundSql boundSql = sqlSource.getBoundSql(ParamNameResolver.wrapToMapIfCollection(1, null));
         String sql = boundSql.getSql();
     }
 
-    private static void 执行示例sql() throws IOException {
-        SqlSession sqlSession = MybatisUtils.getSqlSession();
+    private static void 执行示例sql() throws Exception {
 
-        Users users = sqlSession.selectOne("source.mybatis.mapper.xml.UsersMapper.selectById", 1);
+        SqlSession sqlSession = MybatisUtils.getSessionFactory().openSession();
+
+        Users users = sqlSession.selectOne("source.mybatis.mapper.xml.UsersMappers.selectById", 1);
         sqlSession.getMapper(RolesMapper.class);
         System.out.println(users);
     }

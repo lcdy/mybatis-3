@@ -665,16 +665,16 @@ public class Configuration {
         } else if (ExecutorType.REUSE == executorType) {
             executor = new ReuseExecutor(this, transaction);
         } else {
-            // 默认simple
+            // executorType默认是simple
             executor = new SimpleExecutor(this, transaction);
         }
-        // 如果开启了缓存，对executor包装
-        // 如果CachingExecutor没有命中缓存，还会使用默认的executor发送sql
+        // 默认开启了一级缓存，对executor包装
         if (cacheEnabled) {
             executor = new CachingExecutor(executor);
         }
         // 拦截器
         executor = (Executor) interceptorChain.pluginAll(executor);
+        // 至此: sqlSession创建完成
         return executor;
     }
 

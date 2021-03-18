@@ -1,58 +1,51 @@
 package source.mybatis;
 
-import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.logging.slf4j.Slf4jImpl;
+import org.apache.ibatis.mapping.Environment;
 import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import source.mybatis.domain.Users;
+import org.apache.ibatis.transaction.Transaction;
+import org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory;
+import org.apache.ibatis.transaction.managed.ManagedTransactionFactory;
+import source.mybatis.dbConfig.DruidDataSource;
+import source.mybatis.mappers.anno.RolesMapper;
 
-import javax.print.DocFlavor;
+import javax.sql.DataSource;
 import java.io.IOException;
-import java.io.InputStream;
 
 /**
  * @author lla, 2021/2/9  12:39
+ * <p>
+ * 所有配置均可通过配置类完成，详见AA流程分析
  */
 public class MybatisUtils {
 
-    static InputStream resourceAsStream;
     static SqlSessionFactoryBuilder factoryBuilder;
     static SqlSessionFactory sqlSessionFactory;
     static SqlSession sqlSession;
 
-    public static SqlSessionFactory getSessionFactory() throws IOException {
+    public static SqlSessionFactory getSessionFactory() throws Exception {
         if (sqlSessionFactory == null) {
-            resourceAsStream = Resources.getResourceAsStream("mybatisConfig.xml");
+            Configuration configuration = new Configuration();
+            DataSource dataSource = DruidDataSource.getDataSource();
+            JdbcTransactionFactory jdbcTransactionFactory = new JdbcTransactionFactory();
+            // 环境初始化
+            Environment environment = new Environment("dev", jdbcTransactionFactory, dataSource);
+            configuration.setEnvironment(environment);
+            // 指定mapper位置, xml和anno都支持
+            configuration.addMappers("source.mybatis.mappers");
+            configuration.setLogImpl(Slf4jImpl.class);
+            configuration.setCacheEnabled(true);
+            // 构建
             factoryBuilder = new SqlSessionFactoryBuilder();
-            sqlSessionFactory = factoryBuilder.build(resourceAsStream);
-            resourceAsStream.close();
+            sqlSessionFactory = factoryBuilder.build(configuration);
         }
         return sqlSessionFactory;
     }
 
-    /**
-     * 测试一级缓存
-     * @return SqlSession
-     * @throws IOException x
-     */
-    public static SqlSession getSqlSession() throws IOException {
-        if (sqlSession == null){
-            sqlSession = getSessionFactory().openSession();
-        }
-        return sqlSession;
-    }
-
-    public static SqlSession getSqlSession(Boolean sameSession) throws IOException {
-        getSqlSession();
-        if (sameSession) {
-            return sqlSession;
-        } else {
-            return getSessionFactory().openSession();
-        }
-    }
-
-    public static Configuration getConfiguration() throws IOException {
+    public static Configuration getConfiguration() throws Exception {
         if (sqlSessionFactory == null) {
             getSessionFactory();
         }

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.ibatis.session.SqlSession</OriginalElement>
+  <nodes>
+    <node x="207.2215773809524" y="182.0">org.apache.ibatis.binding.MapperProxy</node>
+    <node x="167.43169642857143" y="637.0">org.apache.ibatis.session.SqlSessionFactoryBuilder</node>
+    <node x="476.4511160714287" y="0.0">org.apache.ibatis.mapping.MappedStatement</node>
+    <node x="0.0" y="556.0">org.apache.ibatis.session.SqlSessionFactory</node>
+    <node x="124.55252976190476" y="344.0">org.apache.ibatis.binding.MapperRegistry</node>
+    <node x="558.6525297619048" y="263.0">javax.sql.DataSource</node>
+    <node x="380.5525297619048" y="475.0">org.apache.ibatis.session.Configuration</node>
+    <node x="554.1525297619048" y="344.0">org.apache.ibatis.mapping.Environment</node>
+    <node x="141.55252976190476" y="263.0">org.apache.ibatis.binding.MapperProxyFactory</node>
+    <node x="127.55252976190476" y="101.0">java.lang.reflect.InvocationHandler</node>
+    <node x="346.5525297619048" y="101.0">org.apache.ibatis.binding.MapperMethod</node>
+    <node x="38.70944940476204" y="0.0">org.apache.ibatis.session.SqlSession</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.ibatis.binding.MapperProxy" target="java.lang.reflect.InvocationHandler">
+      <point x="-18.125" y="-15.5" />
+      <point x="261.5965773809524" y="152.0" />
+      <point x="226.55252976190476" y="152.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.binding.MapperProxy" target="org.apache.ibatis.session.SqlSession">
+      <point x="-54.375" y="-15.5" />
+      <point x="225.3465773809524" y="162.0" />
+      <point x="107.24002976190476" y="162.0" />
+      <point x="107.24002976190476" y="81.0" />
+      <point x="132.20944940476204" y="81.0" />
+      <point x="25.5" y="15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.session.Configuration" target="org.apache.ibatis.mapping.MappedStatement">
+      <point x="21.73333333333335" y="-15.5" />
+      <point x="483.78586309523814" y="405.0" />
+      <point x="521.9191964285715" y="405.0" />
+      <point x="521.9191964285715" y="61.0" />
+      <point x="551.8677827380955" y="61.0" />
+      <point x="-15.083333333333314" y="15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.binding.MapperMethod" target="org.apache.ibatis.mapping.MappedStatement">
+      <point x="38.5" y="-15.5" />
+      <point x="462.0525297619048" y="81.0" />
+      <point x="491.53444940476203" y="81.0" />
+      <point x="-75.41666666666667" y="15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.session.SqlSession" target="org.apache.ibatis.session.Configuration">
+      <point x="-42.5" y="15.5" />
+      <point x="64.20944940476204" y="81.0" />
+      <point x="60.5" y="81.0" />
+      <point x="60.5" y="455.0" />
+      <point x="385.9858630952381" y="455.0" />
+      <point x="-76.06666666666666" y="-15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.session.Configuration" target="org.apache.ibatis.session.SqlSession">
+      <point x="-65.19999999999999" y="-15.5" />
+      <point x="396.85252976190475" y="445.0" />
+      <point x="71.36666666666667" y="445.0" />
+      <point x="71.36666666666667" y="51.0" />
+      <point x="81.20944940476204" y="51.0" />
+      <point x="-25.5" y="15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.session.SqlSessionFactoryBuilder" target="org.apache.ibatis.session.Configuration">
+      <point x="65.0" y="-15.5" />
+      <point x="362.4316964285714" y="612.0" />
+      <point x="502.8025297619048" y="612.0" />
+      <point x="40.75" y="15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.session.SqlSessionFactoryBuilder" target="org.apache.ibatis.session.SqlSessionFactory">
+      <point x="-65.0" y="-15.5" />
+      <point x="232.43169642857143" y="612.0" />
+      <point x="99.0" y="612.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.binding.MapperProxyFactory" target="org.apache.ibatis.binding.MapperProxy">
+      <point x="0.0" y="-15.5" />
+      <point x="245.05252976190476" y="238.0" />
+      <point x="243.4715773809524" y="238.0" />
+      <point x="-36.25" y="15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.binding.MapperProxyFactory" target="org.apache.ibatis.session.SqlSession">
+      <point x="-69.0" y="-15.5" />
+      <point x="176.05252976190476" y="238.0" />
+      <point x="96.24002976190476" y="238.0" />
+      <point x="96.24002976190476" y="71.0" />
+      <point x="115.20944940476204" y="71.0" />
+      <point x="8.5" y="15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.binding.MapperMethod" target="org.apache.ibatis.session.Configuration">
+      <point x="38.5" y="15.5" />
+      <point x="0.0" y="-15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.session.Configuration" target="org.apache.ibatis.mapping.Environment">
+      <point x="54.33333333333337" y="-15.5" />
+      <point x="516.3858630952382" y="435.0" />
+      <point x="590.4025297619048" y="435.0" />
+      <point x="-36.25" y="15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.binding.MapperMethod" target="org.apache.ibatis.session.SqlSession">
+      <point x="-38.5" y="-15.5" />
+      <point x="385.0525297619048" y="71.0" />
+      <point x="166.20944940476204" y="71.0" />
+      <point x="59.5" y="15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.session.Configuration" target="org.apache.ibatis.binding.MapperRegistry">
+      <point x="-54.333333333333314" y="-15.5" />
+      <point x="407.7191964285714" y="435.0" />
+      <point x="141.75252976190475" y="435.0" />
+      <point x="-68.80000000000001" y="15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.binding.MapperRegistry" target="org.apache.ibatis.session.SqlSession">
+      <point x="-64.5" y="-15.5" />
+      <point x="146.05252976190476" y="319.0" />
+      <point x="85.2400297619048" y="319.0" />
+      <point x="85.2400297619048" y="61.0" />
+      <point x="98.20944940476204" y="61.0" />
+      <point x="-8.5" y="15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.binding.MapperRegistry" target="org.apache.ibatis.binding.MapperProxyFactory">
+      <point x="-21.5" y="-15.5" />
+      <point x="189.05252976190476" y="319.0" />
+      <point x="176.05252976190476" y="319.0" />
+      <point x="-69.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.binding.MapperProxy" target="org.apache.ibatis.binding.MapperMethod">
+      <point x="54.375" y="-15.5" />
+      <point x="334.0965773809524" y="162.0" />
+      <point x="385.0525297619048" y="162.0" />
+      <point x="-38.5" y="15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.mapping.Environment" target="javax.sql.DataSource">
+      <point x="-36.25" y="-15.5" />
+      <point x="590.4025297619048" y="319.0" />
+      <point x="592.6525297619048" y="319.0" />
+      <point x="-34.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.binding.MapperRegistry" target="org.apache.ibatis.session.Configuration">
+      <point x="34.39999999999998" y="15.5" />
+      <point x="244.95252976190474" y="405.0" />
+      <point x="440.31919642857144" y="405.0" />
+      <point x="-21.73333333333335" y="-15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.mapping.MappedStatement" target="org.apache.ibatis.session.Configuration">
+      <point x="15.083333333333343" y="15.5" />
+      <point x="582.0344494047621" y="71.0" />
+      <point x="532.7858630952381" y="71.0" />
+      <point x="532.7858630952381" y="415.0" />
+      <point x="494.6525297619048" y="415.0" />
+      <point x="32.60000000000002" y="-15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.session.SqlSessionFactory" target="org.apache.ibatis.session.SqlSession">
+      <point x="-49.5" y="-15.5" />
+      <point x="49.5" y="81.0" />
+      <point x="47.20944940476204" y="81.0" />
+      <point x="-59.5" y="15.5" />
+    </edge>
+    <edge source="org.apache.ibatis.session.SqlSessionFactory" target="org.apache.ibatis.session.Configuration">
+      <point x="49.5" y="-15.5" />
+      <point x="148.5" y="531.0" />
+      <point x="421.3025297619048" y="531.0" />
+      <point x="-40.75" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9302325581395349" x="355.0" y="334.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

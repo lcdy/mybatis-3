@@ -1,4 +1,4 @@
-package source.mybatis.mapper.xml;
+package source.mybatis.mappers.xml;
 
 import source.mybatis.domain.Users;
 

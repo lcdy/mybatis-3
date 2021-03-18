@@ -22,6 +22,7 @@ import org.apache.ibatis.cache.Cache;
 import org.apache.ibatis.cache.CacheException;
 
 /**
+ * 二级缓存, 存在于TMC中, 事物管理缓存
  * @author Clinton Begin
  */
 public class PerpetualCache implements Cache {
