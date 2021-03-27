@@ -62,37 +62,42 @@ public class MapperAnnotationBuilder {
 
   private final Configuration configuration;
   private final MapperBuilderAssistant assistant;
-  private final Class<?> type;
+  private final Class<?> mapperClass;
 
-  public MapperAnnotationBuilder(Configuration configuration, Class<?> type) {
+  public MapperAnnotationBuilder(Configuration configuration, Class<?> mapperClass) {
     // com.slk.xxx  -> com/slk/..*.java(best guess)
-    String resource = type.getName().replace('.', '/') + ".java (best guess)";
+    String resource = mapperClass.getName().replace('.', '/') + ".java (best guess)";
     // 添加一个 assistant
     this.assistant = new MapperBuilderAssistant(configuration, resource);
     this.configuration = configuration;
-    this.type = type;
+    this.mapperClass = mapperClass;
   }
 
   // 紧接着就是这个方法
   public void parse() {
-    String resource = type.toString();
+    String mapperFullName = mapperClass.toString();
     // configuration中是否已经包含
-    if (!configuration.isResourceLoaded(resource)) {
+    Set<String> loadedResources = configuration.getLoadedResources();
+    if (!configuration.isResourceLoaded(mapperFullName)) {
       loadXmlResource();
-      configuration.addLoadedResource(resource);  // 添加
-      assistant.setCurrentNamespace(type.getName());// 添加别名：如果没有配置，默认使用全类名
+      configuration.addLoadedResource(mapperFullName);  // 添加
+      assistant.setCurrentNamespace(mapperClass.getName());// 添加别名：如果没有配置，默认使用全类名
       parseCache();// 可能有缓存
       parseCacheRef();// 有缓存就处理，没有继续
-      for (Method method : type.getMethods()) {
+      Method[] methods = mapperClass.getMethods();
+      for (Method method : methods) {
         if (!canHaveStatement(method)) {// continue直接忽略了
           continue;
         }
-        if (getAnnotationWrapper(method, false, Select.class, SelectProvider.class).isPresent()
-          && method.getAnnotation(ResultMap.class) == null) {
-          parseResultMap(method);  // 没有ResultMap
+        Optional<AnnotationWrapper> annotationWrapper = getAnnotationWrapper(method, false, Select.class, SelectProvider.class);
+        boolean present = annotationWrapper.isPresent();
+        if (present && method.getAnnotation(ResultMap.class) == null) {
+          // 没有wrapper --> selectProvider
+          parseResultMap(method);
         }
         try {
-          parseStatement(method);  // 解析SQL
+          // 有resultMap
+          parseStatement(method);
         } catch (IncompleteElementException e) {
           configuration.addIncompleteMethod(new MethodResolver(this, method));
         }
@@ -124,28 +129,28 @@ public class MapperAnnotationBuilder {
   private void loadXmlResource() {
     // Spring可能不知道真实的资源名称，因此我们检查一个标志，防止再次加载资源两次
     // 标志在这里设置 XMLMapperBuilder#bindMapperForNamespace
-    if (!configuration.isResourceLoaded("namespace:" + type.getName())) {
-      String xmlResource = type.getName().replace('.', '/') + ".xml";
+    if (!configuration.isResourceLoaded("namespace:" + mapperClass.getName())) {
+      String xmlResource = mapperClass.getName().replace('.', '/') + ".xml";
       // #1347
-      InputStream inputStream = type.getResourceAsStream("/" + xmlResource);
+      InputStream inputStream = mapperClass.getResourceAsStream("/" + xmlResource);
       if (inputStream == null) {
         // Search XML mapper that is not in the module but in the classpath.
         try {
-          inputStream = Resources.getResourceAsStream(type.getClassLoader(), xmlResource);
+          inputStream = Resources.getResourceAsStream(mapperClass.getClassLoader(), xmlResource);
         } catch (IOException e2) {
-          System.out.println("\t"+type.getName()+"没有配置xml文件");
+          System.out.println("\t" + mapperClass.getName() + "没有配置xml文件");
           // ignore, resource is not required
         }
       }
       if (inputStream != null) {
-        XMLMapperBuilder xmlParser = new XMLMapperBuilder(inputStream, assistant.getConfiguration(), xmlResource, configuration.getSqlFragments(), type.getName());
+        XMLMapperBuilder xmlParser = new XMLMapperBuilder(inputStream, assistant.getConfiguration(), xmlResource, configuration.getSqlFragments(), mapperClass.getName());
         xmlParser.parse();
       }
     }
   }
 
   private void parseCache() {
-    CacheNamespace cacheDomain = type.getAnnotation(CacheNamespace.class);
+    CacheNamespace cacheDomain = mapperClass.getAnnotation(CacheNamespace.class);
     if (cacheDomain != null) {
       Integer size = cacheDomain.size() == 0 ? null : cacheDomain.size();
       Long flushInterval = cacheDomain.flushInterval() == 0 ? null : cacheDomain.flushInterval();
@@ -167,7 +172,7 @@ public class MapperAnnotationBuilder {
   }
 
   private void parseCacheRef() {
-    CacheNamespaceRef cacheDomainRef = type.getAnnotation(CacheNamespaceRef.class);
+    CacheNamespaceRef cacheDomainRef = mapperClass.getAnnotation(CacheNamespaceRef.class);
     if (cacheDomainRef != null) {
       Class<?> refType = cacheDomainRef.value();
       String refName = cacheDomainRef.name();
@@ -199,7 +204,7 @@ public class MapperAnnotationBuilder {
   private String generateResultMapName(Method method) {
     Results results = method.getAnnotation(Results.class);
     if (results != null && !results.id().isEmpty()) {
-      return type.getName() + "." + results.id();
+      return mapperClass.getName() + "." + results.id();
     }
     StringBuilder suffix = new StringBuilder();
     for (Class<?> c : method.getParameterTypes()) {
@@ -209,7 +214,7 @@ public class MapperAnnotationBuilder {
     if (suffix.length() < 1) {
       suffix.append("-void");
     }
-    return type.getName() + "." + method.getName() + suffix;
+    return mapperClass.getName() + "." + method.getName() + suffix;
   }
 
   private void applyResultMap(String resultMapId, Class<?> returnType, Arg[] args, Result[] results, TypeDiscriminator discriminator) {
@@ -261,10 +266,12 @@ public class MapperAnnotationBuilder {
     final LanguageDriver languageDriver = getLanguageDriver(method);
 
     getAnnotationWrapper(method, true, statementAnnotationTypes).ifPresent(statementAnnotation -> {
-      final SqlSource sqlSource = buildSqlSource(statementAnnotation.getAnnotation(), parameterTypeClass, languageDriver, method);
+
+      Annotation annotation = statementAnnotation.getAnnotation();
+      final SqlSource sqlSource = buildSqlSource(annotation, parameterTypeClass, languageDriver, method);
       final SqlCommandType sqlCommandType = statementAnnotation.getSqlCommandType();
       final Options options = getAnnotationWrapper(method, false, Options.class).map(x -> (Options) x.getAnnotation()).orElse(null);
-      final String mappedStatementId = type.getName() + "." + method.getName();
+      final String mappedStatementId = mapperClass.getName() + "." + method.getName();
 
       final KeyGenerator keyGenerator;
       String keyProperty = null;
@@ -372,7 +379,7 @@ public class MapperAnnotationBuilder {
 
   private Class<?> getReturnType(Method method) {
     Class<?> returnType = method.getReturnType();
-    Type resolvedReturnType = TypeParameterResolver.resolveReturnType(method, type);
+    Type resolvedReturnType = TypeParameterResolver.resolveReturnType(method, mapperClass);
     if (resolvedReturnType instanceof Class) {
       returnType = (Class<?>) resolvedReturnType;
       if (returnType.isArray()) {
@@ -470,7 +477,7 @@ public class MapperAnnotationBuilder {
       resultMapId = result.many().resultMap();
     }
     if (!resultMapId.contains(".")) {
-      resultMapId = type.getName() + "." + resultMapId;
+      resultMapId = mapperClass.getName() + "." + resultMapId;
     }
     return resultMapId;
   }
@@ -488,7 +495,7 @@ public class MapperAnnotationBuilder {
       nestedSelect = result.many().select();
     }
     if (!nestedSelect.contains(".")) {
-      nestedSelect = type.getName() + "." + nestedSelect;
+      nestedSelect = mapperClass.getName() + "." + nestedSelect;
     }
     return nestedSelect;
   }
@@ -590,7 +597,7 @@ public class MapperAnnotationBuilder {
     } else if (annotation instanceof SelectKey) {
       return buildSqlSourceFromStrings(((SelectKey) annotation).statement(), parameterType, languageDriver);
     }
-    return new ProviderSqlSource(assistant.getConfiguration(), annotation, type, method);
+    return new ProviderSqlSource(assistant.getConfiguration(), annotation, mapperClass, method);
   }
 
   private SqlSource buildSqlSourceFromStrings(String[] strings, Class<?> parameterTypeClass,

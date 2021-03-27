@@ -15,12 +15,6 @@
  */
 package org.apache.ibatis.builder.annotation;
 
-import java.lang.annotation.Annotation;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
-import java.util.Map;
-
 import org.apache.ibatis.annotations.Lang;
 import org.apache.ibatis.builder.BuilderException;
 import org.apache.ibatis.mapping.BoundSql;
@@ -28,6 +22,12 @@ import org.apache.ibatis.mapping.SqlSource;
 import org.apache.ibatis.reflection.ParamNameResolver;
 import org.apache.ibatis.scripting.LanguageDriver;
 import org.apache.ibatis.session.Configuration;
+
+import java.lang.annotation.Annotation;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+import java.util.Map;
 
 /**
  * @author Clinton Begin
@@ -130,7 +130,7 @@ public class ProviderSqlSource implements SqlSource {
           + candidateProviderMethodName + "' not found in SqlProvider '" + this.providerType.getName() + "'.");
     }
     this.providerMethod = candidateProviderMethod;
-    this.providerMethodArgumentNames = new ParamNameResolver(configuration, this.providerMethod).getNames();
+    this.providerMethodArgumentNames = new ParamNameResolver(configuration, this.providerMethod).getAllParametersMap_AnnotatedBy_Param();
     this.providerMethodParameterTypes = this.providerMethod.getParameterTypes();
 
     ProviderContext candidateProviderContext = null;

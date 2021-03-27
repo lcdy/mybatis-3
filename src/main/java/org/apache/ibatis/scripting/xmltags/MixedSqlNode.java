@@ -29,7 +29,10 @@ public class MixedSqlNode implements SqlNode {
 
   @Override
   public boolean apply(DynamicContext context) {
-    contents.forEach(node -> node.apply(context));
-    return true;
+      for (SqlNode node : contents) {
+          node.apply(context);
+      }
+      // contents.forEach(node -> node.apply(context));
+      return true;
   }
 }

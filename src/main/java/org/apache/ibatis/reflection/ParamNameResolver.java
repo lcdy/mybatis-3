@@ -15,21 +15,15 @@
  */
 package org.apache.ibatis.reflection;
 
-import java.lang.annotation.Annotation;
-import java.lang.reflect.Method;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.SortedMap;
-import java.util.TreeMap;
-
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.binding.MapperMethod.ParamMap;
 import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
+
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Method;
+import java.util.*;
 
 public class ParamNameResolver {
 
@@ -50,7 +44,7 @@ public class ParamNameResolver {
    * <li>aMethod(int a, RowBounds rb, int b) -&gt; {{0, "0"}, {2, "1"}}</li>
    * </ul>
    */
-  private final SortedMap<Integer, String> names;
+  private final SortedMap<Integer, String> allParametersMap_AnnotatedBy_Param;
 
   private boolean hasParamAnnotation;
 
@@ -87,7 +81,7 @@ public class ParamNameResolver {
       }
       map.put(paramIndex, name);
     }
-    names = Collections.unmodifiableSortedMap(map);
+    allParametersMap_AnnotatedBy_Param = Collections.unmodifiableSortedMap(map);
   }
 
   private String getActualParamName(Method method, int paramIndex) {
@@ -103,8 +97,8 @@ public class ParamNameResolver {
    *
    * @return the names
    */
-  public String[] getNames() {
-    return names.values().toArray(new String[0]);
+  public String[] getAllParametersMap_AnnotatedBy_Param() {
+    return allParametersMap_AnnotatedBy_Param.values().toArray(new String[0]);
   }
 
   /**
@@ -115,31 +109,31 @@ public class ParamNameResolver {
    * ...).
    * </p>
    *
-   * @param args
-   *          the args
+   * @param parameters the args
    * @return the named params
    */
-  public Object getNamedParams(Object[] args) {
-    final int paramCount = names.size();
-    if (args == null || paramCount == 0) {
+  public Object getNamedParams(Object[] parameters) {
+    final int paramCount = allParametersMap_AnnotatedBy_Param.size();
+    if (parameters == null || paramCount == 0) {
       return null;
     } else if (!hasParamAnnotation && paramCount == 1) {
-      Object value = args[names.firstKey()];
-      return wrapToMapIfCollection(value, useActualParamName ? names.get(0) : null);
+      Object value = parameters[allParametersMap_AnnotatedBy_Param.firstKey()];
+      return wrapToMapIfCollection(value, useActualParamName ? allParametersMap_AnnotatedBy_Param.get(0) : null);
     } else {
-      final Map<String, Object> param = new ParamMap<>();
+      final Map<String, Object> annotatedParamAndTrueParameterRelation = new ParamMap<>();
       int i = 0;
-      for (Map.Entry<Integer, String> entry : names.entrySet()) {
-        param.put(entry.getValue(), args[entry.getKey()]);
+      for (Map.Entry<Integer, String> annotatedParamKey : allParametersMap_AnnotatedBy_Param.entrySet()) {
+        // 一一对应
+        annotatedParamAndTrueParameterRelation.put(annotatedParamKey.getValue(), parameters[annotatedParamKey.getKey()]);
         // add generic param names (param1, param2, ...)
         final String genericParamName = GENERIC_NAME_PREFIX + (i + 1);
         // ensure not to overwrite parameter named with @Param
-        if (!names.containsValue(genericParamName)) {
-          param.put(genericParamName, args[entry.getKey()]);
+        if (!allParametersMap_AnnotatedBy_Param.containsValue(genericParamName)) {
+          annotatedParamAndTrueParameterRelation.put(genericParamName, parameters[annotatedParamKey.getKey()]);
         }
         i++;
       }
-      return param;
+      return annotatedParamAndTrueParameterRelation;
     }
   }
 

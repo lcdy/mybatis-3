@@ -8,9 +8,8 @@ import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import source.mybatis.domain.Users;
-import source.mybatis.mappers.anno.RolesMapper;
+import source.mybatis.mappers.RolesMapper;
 
-import java.io.IOException;
 import java.util.Collection;
 
 /**

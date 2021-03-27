@@ -1,9 +1,7 @@
 package source.mybatis;
 
 import org.apache.ibatis.session.SqlSession;
-import source.mybatis.mappers.anno.RolesMapper;
-
-import java.io.IOException;
+import source.mybatis.mappers.RolesMapper;
 
 /**
  * @author lla, 2021/2/12  18:52

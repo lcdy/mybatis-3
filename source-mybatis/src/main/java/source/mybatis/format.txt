@@ -1,0 +1,1 @@
+<foreach collection='#{goodsList}' index='index' item='id_' open='(' separator=',' close=')'>

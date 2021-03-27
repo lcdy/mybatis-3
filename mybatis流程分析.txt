@@ -17,3 +17,41 @@ localCache
 3、二级缓存
 ----------------------------------------------------------------------
 perpetualCache: 比较复杂
+
+
+# configuration.addMapper(UsersMapper.class);
+
+## parse方法：
+
+### 构建mapperStatement
+对应的是prepareStatement
+包含一些几个属性:
+- id: 方法的路径
+- SQLSource: sql源未解析的SQL标签
+- params: 仅仅是类型
+- resultMap: 仅仅是类型
+
+
+### 调用方法
+- 获取mapperStatement根据id
+- 根据mapperStatement构建SQL
+- 参数赋值
+- 调用底层API
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

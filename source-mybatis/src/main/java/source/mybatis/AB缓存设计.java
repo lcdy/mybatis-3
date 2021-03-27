@@ -3,7 +3,7 @@ package source.mybatis;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import source.mybatis.domain.Roles;
-import source.mybatis.mappers.anno.RolesMapper;
+import source.mybatis.mappers.RolesMapper;
 
 /**
  * @author lla, 2021/2/7  16:45

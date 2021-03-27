@@ -1,12 +1,11 @@
-package source.mybatis.mappers.anno;
+package aa.slk.mybatis.mappers;
 
+import aa.slk.mybatis.domain.Roles;
+import aa.slk.mybatis.interceptors.Page;
 import org.apache.ibatis.annotations.CacheNamespace;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.cache.impl.PerpetualCache;
-import source.mybatis.Page;
-import source.mybatis.domain.Roles;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.cache.impl.PerpetualCache;
 
 import java.util.List;
 
@@ -16,7 +15,7 @@ public interface RolesMapper {
     Roles selectById(@Param("id") Integer id);
 
     @Select("select * from roles where id > #{id} limit #{limit}")
-    List<Roles> selectListTwoParameter(@Param("id") Integer id, @Param("limit")Integer limit);
+    List<Roles> selectListTwoParameter(@Param("id") Integer id, @Param("limit") Integer limit);
 
     @Select("select * from roles")
     List<Roles> selectListPageable(@Param("page") Page page);

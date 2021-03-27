@@ -325,6 +325,10 @@ public class Configuration {
         loadedResources.add(resource);
     }
 
+    public Set<String> getLoadedResources() {
+        return this.loadedResources;
+    }
+
     public boolean isResourceLoaded(String resource) {
         return loadedResources.contains(resource);
     }

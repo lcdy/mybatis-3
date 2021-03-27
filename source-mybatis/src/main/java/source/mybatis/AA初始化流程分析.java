@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory;
 import source.mybatis.dbConfig.DruidDataSource;
 import source.mybatis.domain.Roles;
-import source.mybatis.mappers.anno.RolesMapper;
+import source.mybatis.mappers.RolesMapper;
 
 import javax.sql.DataSource;
 

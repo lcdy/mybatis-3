@@ -43,34 +43,34 @@ public class MapperRegistry {
       throw new BindingException("Type " + type + " is not known to the MapperRegistry.");
     }
     try {
-      return mapperProxyFactory.newInstance(sqlSession);
+        return mapperProxyFactory.newInstance(sqlSession);
     } catch (Exception e) {
-      throw new BindingException("Error getting mapper instance. Cause: " + e, e);
+        throw new BindingException("Error getting mapper instance. Cause: " + e, e);
     }
   }
 
-  public <T> boolean hasMapper(Class<T> type) {
-    return knownMappers.containsKey(type);
-  }
+    public <T> boolean hasMapper(Class<T> type) {
+        return knownMappers.containsKey(type);
+    }
 
-  public <T> void addMapper(Class<T> type) {
-    if (type.isInterface()) {
-      if (hasMapper(type)) {
-        throw new BindingException("Type " + type + " is already known to the MapperRegistry.");
-      }
-      boolean loadCompleted = false;
-      try {// 添加扫描到的类
-        knownMappers.put(type, new MapperProxyFactory<>(type));
-        // It's important that the type is added before the parser is run
-        // otherwise the binding may automatically be attempted by the mapper parser.
-        // If the type is already known, it won't try.
-        // 在运行解析器之前添加类型很重要, 否则，映射器解析器可能会自动尝试绑定, 如果类型是已知的，则不会尝试。映射xml文件，结果集
-        MapperAnnotationBuilder parser = new MapperAnnotationBuilder(config, type);  // 映射的xml文件
-        parser.parse();// 设置别名，结果集什么的
+    public <T> void addMapper(Class<T> mapperClass) {
+        if (mapperClass.isInterface()) {
+            if (hasMapper(mapperClass)) {
+                throw new BindingException("Type " + mapperClass + " is already known to the MapperRegistry.");
+            }
+            boolean loadCompleted = false;
+            try {// 添加扫描到的类
+                knownMappers.put(mapperClass, new MapperProxyFactory<>(mapperClass));
+                // It's important that the type is added before the parser is run
+                // otherwise the binding may automatically be attempted by the mapper parser.
+                // If the type is already known, it won't try.
+                // 在运行解析器之前添加类型很重要, 否则，映射器解析器可能会自动尝试绑定, 如果类型是已知的，则不会尝试。映射xml文件，结果集
+                MapperAnnotationBuilder parser = new MapperAnnotationBuilder(config, mapperClass);  // 映射的xml文件
+                parser.parse();// 设置别名，结果集什么的
         loadCompleted = true;
       } finally {
         if (!loadCompleted) {
-          knownMappers.remove(type);
+            knownMappers.remove(mapperClass);
         }
       }
     }
